@@ -1,0 +1,51 @@
+Package: additive
+Type: Package
+Version: 0.0.1
+Title: Bindings for Generalized Additive Models (GAM)
+Authors@R:
+    c(person(given = "Hamada S.",
+             family = "Badr",
+             email = "badr@jhu.edu",
+             role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0002-9808-2344")))
+Description: Fit Generalized Additive Models (GAM) using 'mgcv' with 'parsnip'/'tidymodels'
+    via 'additive' <doi:10.5281/zenodo.4784246>. 'tidymodels' is a collection of
+    packages for machine learning; see Wickham (2020) <https://www.tidymodels.org>).
+    The technical details of 'mgcv' are described in Wood (2017)
+    <doi:10.1201/9781315370279>.
+License: MIT + file LICENSE
+URL: https://hsbadr.github.io/additive/,
+     https://github.com/hsbadr/additive
+BugReports: https://github.com/hsbadr/additive/issues
+Depends:
+    mgcv (>= 1.8-34),
+    parsnip (>= 0.1.5),
+    R (>= 2.10)
+Imports:
+    dplyr,
+    purrr,
+    rlang,
+    stats,
+    tibble,
+    utils
+Suggests:
+    covr,
+    devtools,
+    knitr,
+    recipes,
+    rmarkdown,
+    roxygen2,
+    spelling,
+    testthat,
+    workflows
+VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
+Collate:
+    'additive_init.R'
+    'additive_load.R'
+    'additive_make.R'
+    'additive.R'
+LazyLoad: yes
+Language: en-US
