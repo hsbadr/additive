@@ -15,7 +15,7 @@ citEntry(entry = "Manual",
   year         = "2021",
   journal      = "Comprehensive R Archive Network (CRAN)",
   url          = "https://cran.r-project.org/package=additive",
-  doi          = "10.5281/zenodo.4784246",
+  doi          = "10.5281/zenodo.4784310",
   language     = "English",
   key          = "additive-manual",
 
@@ -23,5 +23,5 @@ citEntry(entry = "Manual",
   paste("Hamada S. Badr and Paul C. Bürkner (2021):",
         "additive: Bindings for Generalized Additive Models (GAM),",
         "_Comprehensive R Archive Network (CRAN)_.",
-        "DOI: 10.5281/zenodo.4784246")
+        "DOI: 10.5281/zenodo.4784310")
 )
