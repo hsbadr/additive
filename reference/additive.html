@@ -160,6 +160,9 @@ before fitting and allows the model to be created using
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
   weights <span class='op'>=</span> <span class='cn'>NULL</span>,
   subset <span class='op'>=</span> <span class='cn'>NULL</span>,
+  start <span class='op'>=</span> <span class='cn'>NULL</span>,
+  etastart <span class='op'>=</span> <span class='cn'>NULL</span>,
+  mustart <span class='op'>=</span> <span class='cn'>NULL</span>,
   na.action <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.intercept <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.unused.levels <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -197,6 +200,9 @@ before fitting and allows the model to be created using
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
   weights <span class='op'>=</span> <span class='cn'>NULL</span>,
   subset <span class='op'>=</span> <span class='cn'>NULL</span>,
+  start <span class='op'>=</span> <span class='cn'>NULL</span>,
+  etastart <span class='op'>=</span> <span class='cn'>NULL</span>,
+  mustart <span class='op'>=</span> <span class='cn'>NULL</span>,
   na.action <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.intercept <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.unused.levels <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -352,6 +358,18 @@ included in <code>formula</code> (this used to conform to the behaviour of
       <th>subset</th>
       <td><p>an optional vector specifying a subset of observations to be
           used in the fitting process.</p></td>
+    </tr>
+    <tr>
+      <th>start</th>
+      <td><p>Initial values for the model coefficients.</p></td>
+    </tr>
+    <tr>
+      <th>etastart</th>
+      <td><p>Initial values for the linear predictor.</p></td>
+    </tr>
+    <tr>
+      <th>mustart</th>
+      <td><p>Initial values for the expected response.</p></td>
     </tr>
     <tr>
       <th>na.action</th>
