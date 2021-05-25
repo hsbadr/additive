@@ -317,7 +317,12 @@ update.additive <-
 check_args.additive <- function(object) {
   args <- lapply(object$args, rlang::eval_tidy)
 
-  if (!is.numeric(args$elect)) {
+  if (!is.null(args$fitfunc)) {
+    check_func_val <- utils::getFromNamespace("check_func_val", "parsnip")
+    check_func_val(args$fitfunc)
+  }
+
+  if (!is.null(args$select) & !is.logical(args$select)) {
     rlang::abort("`select` should be logical.")
   }
 
