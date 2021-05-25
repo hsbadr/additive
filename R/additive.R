@@ -380,6 +380,7 @@ additive_fit <- function(formula, data, ...) {
 
   dots$data <- data
 
+  # Check the fit function
   fitfunc <- as.list(dots$fitfunc)
   if (!is.null(fitfunc$fun)) {
     fitcall <- rlang::call2(fitfunc$fun, .ns = fitfunc$pkg)
