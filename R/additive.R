@@ -15,11 +15,15 @@
 #'  Possible values for this model are "unknown", "regression", or
 #'  "classification".
 #'
-#' @param fitfunc a function for fitting a generalized additive model.
-#'  This defaults to \code{\link[mgcv]{gam}}, but can also use
-#'  \code{\link[mgcv]{bam}} for big data. A user-specified function
-#'  is also accepted provided that it is fully compatible with the
-#'  \pkg{mgcv} and takes the same arguments.
+#' @param fitfunc A named character vector that describes how to call
+#'  a function for fitting a generalized additive model. This defaults
+#'  to \code{c(pkg = "mgcv", fun = "gam")} (\code{\link[mgcv]{gam}}).
+#'  \code{fitfunc} should have elements \code{pkg} and \code{fun}.
+#'  The former is optional but is recommended and the latter is
+#'  required. For example, \code{c(pkg = "mgcv", fun = "bam")} would
+#'  be used to invoke \code{\link[mgcv]{bam}} for big data.
+#'  A user-specified function is also accepted provided that it is
+#'  fully compatible with \code{\link[mgcv]{gam}}.
 #'
 #' @param formula.override Overrides the formula; for details see
 #'  \code{\link[mgcv]{formula.gam}}.
@@ -372,9 +376,9 @@ additive_fit <- function(formula, data, ...) {
 
   dots$data <- data
 
-  # Check the fit function
-  if (is.function(dots$fitfunc)) {
-    fitfunc <- dots$fitfunc
+  if (!is.null(dots$fitfunc$fun)) {
+    fitcall <- rlang::call2(dots$fitfunc$fun, .ns = dots$fitfunc$pkg)
+    fitfunc <- rlang::call_fn(fitcall)
   } else {
     fitfunc <- mgcv::gam
   }
