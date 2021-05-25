@@ -155,6 +155,7 @@ before fitting and allows the model to be created using
   paraPen <span class='op'>=</span> <span class='cn'>NULL</span>,
   chunk.size <span class='op'>=</span> <span class='cn'>NULL</span>,
   rho <span class='op'>=</span> <span class='cn'>NULL</span>,
+  AR.start <span class='op'>=</span> <span class='cn'>NULL</span>,
   H <span class='op'>=</span> <span class='cn'>NULL</span>,
   G <span class='op'>=</span> <span class='cn'>NULL</span>,
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -194,6 +195,7 @@ before fitting and allows the model to be created using
   paraPen <span class='op'>=</span> <span class='cn'>NULL</span>,
   chunk.size <span class='op'>=</span> <span class='cn'>NULL</span>,
   rho <span class='op'>=</span> <span class='cn'>NULL</span>,
+  AR.start <span class='op'>=</span> <span class='cn'>NULL</span>,
   H <span class='op'>=</span> <span class='cn'>NULL</span>,
   G <span class='op'>=</span> <span class='cn'>NULL</span>,
   offset <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -327,6 +329,12 @@ Reset to <code>4*p</code> if <code>chunk.size &lt; 4*p</code> where <code>p</cod
            uncorrelated under correct model) returned in 
            <code>std.rsd</code> if non zero. Also usable with other models when <code>discrete=TRUE</code>, in which case the AR model
            is applied to the working residuals and corresponds to a GEE approximation.</p></td>
+    </tr>
+    <tr>
+      <th>AR.start</th>
+      <td><p>logical variable of same length as data, <code>TRUE</code> at first observation of an independent
+section of AR1 correlation. Very first observation in data frame does not need this. If <code>NULL</code> then 
+there are no breaks in AR1 correlaion.</p></td>
     </tr>
     <tr>
       <th>H</th>
