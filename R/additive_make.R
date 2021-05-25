@@ -162,6 +162,15 @@ additive_make <- function(modes = c("classification", "regression")) {
     parsnip::set_model_arg(
       model = model,
       eng = engine,
+      parsnip = "AR.start",
+      original = "AR.start",
+      func = fitfunc,
+      has_submodel = FALSE
+    )
+
+    parsnip::set_model_arg(
+      model = model,
+      eng = engine,
       parsnip = "H",
       original = "H",
       func = fitfunc,

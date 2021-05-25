@@ -22,6 +22,7 @@ additive(
   paraPen = NULL,
   chunk.size = NULL,
   rho = NULL,
+  AR.start = NULL,
   H = NULL,
   G = NULL,
   offset = NULL,
@@ -60,6 +61,7 @@ additive(
   paraPen = NULL,
   chunk.size = NULL,
   rho = NULL,
+  AR.start = NULL,
   H = NULL,
   G = NULL,
   offset = NULL,
@@ -165,6 +167,10 @@ Reset to \code{4*p} if \code{chunk.size < 4*p} where \code{p} is the number of c
            uncorrelated under correct model) returned in 
            \code{std.rsd} if non zero. Also usable with other models when \code{discrete=TRUE}, in which case the AR model
            is applied to the working residuals and corresponds to a GEE approximation.}
+
+\item{AR.start}{logical variable of same length as data, \code{TRUE} at first observation of an independent
+section of AR1 correlation. Very first observation in data frame does not need this. If \code{NULL} then 
+there are no breaks in AR1 correlaion.}
 
 \item{H}{A user supplied fixed quadratic penalty on the parameters of the 
 GAM can be supplied, with this as its coefficient matrix. A common use of this term is 
