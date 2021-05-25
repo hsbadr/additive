@@ -27,6 +27,8 @@
 #' @inheritParams mgcv::gam
 #' @inheritParams mgcv::bam
 #'
+#' @inheritParams mgcv::gam.fit
+#'
 #' @details
 #' The data given to the function are not saved and are only used
 #'  to determine the _mode_ of the model. For `additive()`, the
@@ -85,6 +87,9 @@ additive <-
            offset = NULL,
            weights = NULL,
            subset = NULL,
+           start = NULL,
+           etastart = NULL,
+           mustart = NULL,
            na.action = NULL,
            drop.intercept = NULL,
            drop.unused.levels = NULL,
@@ -117,6 +122,9 @@ additive <-
       offset = rlang::enquo(offset),
       weights = rlang::enquo(weights),
       subset = rlang::enquo(subset),
+      start = rlang::enquo(start),
+      etastart = rlang::enquo(etastart),
+      mustart = rlang::enquo(mustart),
       na.action = rlang::enquo(na.action),
       drop.intercept = rlang::enquo(drop.intercept),
       drop.unused.levels = rlang::enquo(drop.unused.levels),
@@ -210,6 +218,9 @@ update.additive <-
            offset = NULL,
            weights = NULL,
            subset = NULL,
+           start = NULL,
+           etastart = NULL,
+           mustart = NULL,
            na.action = NULL,
            drop.intercept = NULL,
            drop.unused.levels = NULL,
@@ -250,6 +261,9 @@ update.additive <-
       offset = rlang::enquo(offset),
       weights = rlang::enquo(weights),
       subset = rlang::enquo(subset),
+      start = rlang::enquo(start),
+      etastart = rlang::enquo(etastart),
+      mustart = rlang::enquo(mustart),
       na.action = rlang::enquo(na.action),
       drop.intercept = rlang::enquo(drop.intercept),
       drop.unused.levels = rlang::enquo(drop.unused.levels),
@@ -309,8 +323,12 @@ check_args.additive <- function(object) {
 # -------------------------------------------------------------------------
 
 #' Fit Generalized Additive Models (GAM)
+#'
 #' @inheritParams mgcv::gam
 #' @inheritParams mgcv::bam
+#'
+#' @inheritParams mgcv::gam.fit
+#'
 #  @param ... Other arguments passed to \code{\link[mgcv]{gam.fit}}.
 #'
 #  @return An fitted GAM object of class \code{gamObject}.

@@ -27,6 +27,9 @@ additive(
   offset = NULL,
   weights = NULL,
   subset = NULL,
+  start = NULL,
+  etastart = NULL,
+  mustart = NULL,
   na.action = NULL,
   drop.intercept = NULL,
   drop.unused.levels = NULL,
@@ -63,6 +66,9 @@ additive(
   offset = NULL,
   weights = NULL,
   subset = NULL,
+  start = NULL,
+  etastart = NULL,
+  mustart = NULL,
   na.action = NULL,
   drop.intercept = NULL,
   drop.unused.levels = NULL,
@@ -180,6 +186,12 @@ included in \code{formula} (this used to conform to the behaviour of
 
 \item{subset}{ an optional vector specifying a subset of observations to be
           used in the fitting process.}
+
+\item{start}{Initial values for the model coefficients.}
+
+\item{etastart}{Initial values for the linear predictor.}
+
+\item{mustart}{Initial values for the expected response.}
 
 \item{na.action}{ a function which indicates what should happen when the data
           contain `NA's.  The default is set by the `na.action' setting
