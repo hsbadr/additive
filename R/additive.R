@@ -379,11 +379,12 @@ additive_fit <- function(formula, data, ...) {
   fitfunc <- as.list(dots$fitfunc)
   if (!is.null(fitfunc$fun)) {
     fitcall <- rlang::call2(fitfunc$fun, .ns = fitfunc$pkg)
-    fitfunc <- rlang::call_fn(fitcall)
   } else {
-    fitfunc <- mgcv::gam
+    fitcall <- rlang::call2("gam", .ns = "mgcv")
   }
   dots$fitfunc <- NULL
+
+  fitfunc <- rlang::call_fn(fitcall)
 
   do.call(fitfunc, dots)
 }
