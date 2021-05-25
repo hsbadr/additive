@@ -236,7 +236,7 @@ smoothing parameter is estimated as zero then the extra penalty has no effect. U
 \code{FALSE} then the model is set up and an object \code{G} containing what
 would be required to fit is returned is returned. See argument \code{G}.}
 
-\item{object}{A Generalized Additive Models (GAM) specification.}
+\item{object}{A Generalized Additive Model (GAM) specification.}
 
 \item{parameters}{A 1-row tibble or named list with \emph{main}
 parameters to update. If the individual arguments are used,
@@ -289,7 +289,7 @@ Engines may have pre-set default arguments when executing the model fit
 call. For this type of model, the template of the fit calls are:\if{html}{\out{<div class="r">}}\preformatted{additive() \%>\%
   set_engine("mgcv") \%>\%
   translate()
-}\if{html}{\out{</div>}}\preformatted{## Generalized Additive Models (GAM) Specification (regression)
+}\if{html}{\out{</div>}}\preformatted{## Generalized Additive Model (GAM) Specification (regression)
 ## 
 ## Computational engine: mgcv 
 ## 

@@ -151,7 +151,7 @@ additive <-
 
 #' @export
 print.additive <- function(x, ...) {
-  cat("Generalized Additive Models (GAM) Specification (", x$mode, ")\n\n", sep = "")
+  cat("Generalized Additive Model (GAM) Specification (", x$mode, ")\n\n", sep = "")
   parsnip::model_printer(x, ...)
 
   if (!is.null(x$method$fit$args)) {
@@ -177,7 +177,7 @@ translate.additive <- function(x, engine = x$engine, ...) {
 
 # -------------------------------------------------------------------------
 
-#' @param object A Generalized Additive Models (GAM) specification.
+#' @param object A Generalized Additive Model (GAM) specification.
 #' @param parameters A 1-row tibble or named list with _main_
 #'  parameters to update. If the individual arguments are used,
 #'  these will supersede the values in `parameters`. Also, using
