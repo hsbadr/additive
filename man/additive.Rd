@@ -30,7 +30,6 @@ additive(
   start = NULL,
   etastart = NULL,
   mustart = NULL,
-  na.action = NULL,
   drop.intercept = NULL,
   drop.unused.levels = NULL,
   cluster = NULL,
@@ -69,7 +68,6 @@ additive(
   start = NULL,
   etastart = NULL,
   mustart = NULL,
-  na.action = NULL,
   drop.intercept = NULL,
   drop.unused.levels = NULL,
   cluster = NULL,
@@ -92,11 +90,15 @@ additive_fit(formula, data, ...)
 Possible values for this model are "unknown", "regression", or
 "classification".}
 
-\item{fitfunc}{a function for fitting a generalized additive model.
-This defaults to \code{\link[mgcv]{gam}}, but can also use
-\code{\link[mgcv]{bam}} for big data. A user-specified function
-is also accepted provided that it is fully compatible with the
-\pkg{mgcv} and takes the same arguments.}
+\item{fitfunc}{A named character vector that describes how to call
+a function for fitting a generalized additive model. This defaults
+to \code{c(pkg = "mgcv", fun = "gam")} (\code{\link[mgcv]{gam}}).
+\code{fitfunc} should have elements \code{pkg} and \code{fun}.
+The former is optional but is recommended and the latter is
+required. For example, \code{c(pkg = "mgcv", fun = "bam")} would
+be used to invoke \code{\link[mgcv]{bam}} for big data.
+A user-specified function is also accepted provided that it is
+fully compatible with \code{\link[mgcv]{gam}}.}
 
 \item{formula.override}{Overrides the formula; for details see
 \code{\link[mgcv]{formula.gam}}.}
@@ -192,11 +194,6 @@ included in \code{formula} (this used to conform to the behaviour of
 \item{etastart}{Initial values for the linear predictor.}
 
 \item{mustart}{Initial values for the expected response.}
-
-\item{na.action}{ a function which indicates what should happen when the data
-          contain `NA's.  The default is set by the `na.action' setting
-          of `options', and is `na.fail' if that is unset.  The
-          ``factory-fresh'' default is `na.omit'.}
 
 \item{drop.intercept}{Set to \code{TRUE} to force the model to really not have the a constant in the parametric model part,
 even with factor variables present. Can be vector when \code{formula} is a list.}
