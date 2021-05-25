@@ -163,7 +163,6 @@ before fitting and allows the model to be created using
   start <span class='op'>=</span> <span class='cn'>NULL</span>,
   etastart <span class='op'>=</span> <span class='cn'>NULL</span>,
   mustart <span class='op'>=</span> <span class='cn'>NULL</span>,
-  na.action <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.intercept <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.unused.levels <span class='op'>=</span> <span class='cn'>NULL</span>,
   cluster <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -203,7 +202,6 @@ before fitting and allows the model to be created using
   start <span class='op'>=</span> <span class='cn'>NULL</span>,
   etastart <span class='op'>=</span> <span class='cn'>NULL</span>,
   mustart <span class='op'>=</span> <span class='cn'>NULL</span>,
-  na.action <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.intercept <span class='op'>=</span> <span class='cn'>NULL</span>,
   drop.unused.levels <span class='op'>=</span> <span class='cn'>NULL</span>,
   cluster <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -232,11 +230,15 @@ Possible values for this model are "unknown", "regression", or
     </tr>
     <tr>
       <th>fitfunc</th>
-      <td><p>a function for fitting a generalized additive model.
-This defaults to <code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>, but can also use
-<code><a href='https://rdrr.io/pkg/mgcv/man/bam.html'>bam</a></code> for big data. A user-specified function
-is also accepted provided that it is fully compatible with the
-<span class="pkg">mgcv</span> and takes the same arguments.</p></td>
+      <td><p>A named character vector that describes how to call
+a function for fitting a generalized additive model. This defaults
+to <code><a href='https://rdrr.io/r/base/c.html'>c(pkg = "mgcv", fun = "gam")</a></code> (<code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>).
+<code>fitfunc</code> should have elements <code>pkg</code> and <code>fun</code>.
+The former is optional but is recommended and the latter is
+required. For example, <code><a href='https://rdrr.io/r/base/c.html'>c(pkg = "mgcv", fun = "bam")</a></code> would
+be used to invoke <code><a href='https://rdrr.io/pkg/mgcv/man/bam.html'>bam</a></code> for big data.
+A user-specified function is also accepted provided that it is
+fully compatible with <code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>.</p></td>
     </tr>
     <tr>
       <th>formula.override</th>
@@ -370,13 +372,6 @@ included in <code>formula</code> (this used to conform to the behaviour of
     <tr>
       <th>mustart</th>
       <td><p>Initial values for the expected response.</p></td>
-    </tr>
-    <tr>
-      <th>na.action</th>
-      <td><p>a function which indicates what should happen when the data
-          contain `NA's.  The default is set by the `na.action' setting
-          of `options', and is `na.fail' if that is unset.  The
-          ``factory-fresh'' default is `na.omit'.</p></td>
     </tr>
     <tr>
       <th>drop.intercept</th>
