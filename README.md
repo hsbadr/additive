@@ -42,8 +42,8 @@ The development version of
 [`additive`](https://hsbadr.github.io/additive/) can be installed from
 [GitHub](https://github.com/hsbadr/additive) using:
 
-    install.packages("remotes")
-    remotes::install_github("hsbadr/additive")
+    install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+    pak::pkg_install("hsbadr/additive")
 
 Example
 -------
