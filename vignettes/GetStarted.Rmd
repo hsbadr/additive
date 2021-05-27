@@ -1,5 +1,5 @@
 ---
-title: "Get started with additive"
+title: "Get started with `additive`"
 author: "Hamada S. Badr"
 date: "`r Sys.Date()`"
 output:
