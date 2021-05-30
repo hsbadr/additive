@@ -365,25 +365,20 @@ check_args.additive <- function(object) {
 #' @rdname additive
 #' @export
 additive_fit <- function(formula, data, ...) {
-  dots <- list(...)
+  dots <- list(formula = formula, data = rlang::enquo(data), ...)
 
   # Override the formula, if needed
-  if (inherits(
-    dots$formula.override,
-    c("formula", "list")
-  )) {
-    dots$formula <- dots$formula.override
-  } else if (inherits(
-    formula,
-    c("formula", "list")
-  )) {
-    dots$formula <- formula
-  } else {
-    rlang::abort("Unsupported or invalid formula!")
+  if (!is.null(dots$formula.override)) {
+    if (inherits(
+      dots$formula.override,
+      c("formula", "list")
+    )) {
+      dots$formula <- dots$formula.override
+    } else {
+      rlang::abort("Unsupported or invalid formula.override!")
+    }
   }
   dots$formula.override <- NULL
-
-  dots$data <- data
 
   # Check the fit function
   fitfunc <- as.list(dots$fitfunc)
