@@ -54,9 +54,10 @@
 #'
 #' additive(mode = "classification")
 #' additive(mode = "regression")
-#' \dontrun{
+#'
 #' set.seed(2020)
 #' dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
+#'
 #' additive_mod <-
 #'   additive() %>%
 #'   set_engine("mgcv") %>%
@@ -66,7 +67,6 @@
 #'   )
 #'
 #' summary(additive_mod$fit)
-#' }
 #'
 #' # -------------------------------------------------------------------------
 #' @export
