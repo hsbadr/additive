@@ -6,7 +6,7 @@ Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.p
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+Stable](https://img.shields.io/badge/Lifecycle-Stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Codecov Test
 Coverage](https://codecov.io/gh/hsbadr/additive/branch/main/graph/badge.svg)](https://codecov.io/gh/hsbadr/additive?branch=main)
 [![Last
