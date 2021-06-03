@@ -7,21 +7,17 @@ citEntry(entry = "Manual",
                         family = "Badr",
                         email = "badr@jhu.edu",
                         role = c("aut", "cre"),
-                        comment = c(ORCID = "0000-0002-9808-2344")),
-                 person(given = "Paul C.",
-                        family = "Bürkner",
-                        email = "paul.buerkner@gmail.com",
-                        role = c("aut"))),
+                        comment = c(ORCID = "0000-0002-9808-2344"))),
   year         = "2021",
   journal      = "Comprehensive R Archive Network (CRAN)",
-  url          = "https://cran.r-project.org/package=additive",
+  url          = "https://hsbadr.github.io/additive/",
   doi          = "10.5281/zenodo.4882764",
   language     = "English",
   key          = "additive-manual",
 
   textVersion  =
-  paste("Hamada S. Badr and Paul C. Bürkner (2021):",
+  paste("Hamada S. Badr (2021):",
         "additive: Bindings for Generalized Additive Models (GAM),",
         "_Comprehensive R Archive Network (CRAN)_.",
-        "DOI: 10.5281/zenodo.4882764")
+        "URL: https://hsbadr.github.io/additive/")
 )
