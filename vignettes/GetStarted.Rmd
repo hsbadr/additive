@@ -42,7 +42,7 @@ print(test_recipe)
 ```
 
 Above, we not only define the roles of the relevant variables but also
-normalized all predictors to facilitate model fitting later on.
+normalized all numeric predictors to facilitate model fitting later on.
 In the next step, we use `additive` to set up a basic model structure.
 
 ```{r}
