@@ -34,7 +34,7 @@ test_recipe <- dat %>%
   recipe() %>%
   update_role(y, new_role = "outcome") %>%
   update_role(x0, x1, x2, x3, new_role = "predictor") %>%
-  step_normalize(all_predictors())
+  step_normalize(all_numeric_predictors())
 ```
 
 ```{r}
