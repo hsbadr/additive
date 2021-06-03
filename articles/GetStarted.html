@@ -89,7 +89,7 @@
 </h1>
                         <h4 class="author">Hamada S. Badr</h4>
             
-            <h4 class="date">2021-05-31</h4>
+            <h4 class="date">2021-06-03</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/hsbadr/additive/blob/master/vignettes/GetStarted.Rmd"><code>vignettes/GetStarted.Rmd</code></a></small>
       <div class="hidden name"><code>GetStarted.Rmd</code></div>
@@ -114,7 +114,7 @@
   <span class="fu"><a href="https://recipes.tidymodels.org/reference/recipe.html">recipe</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://recipes.tidymodels.org/reference/roles.html">update_role</a></span><span class="op">(</span><span class="va">y</span>, new_role <span class="op">=</span> <span class="st">"outcome"</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://recipes.tidymodels.org/reference/roles.html">update_role</a></span><span class="op">(</span><span class="va">x0</span>, <span class="va">x1</span>, <span class="va">x2</span>, <span class="va">x3</span>, new_role <span class="op">=</span> <span class="st">"predictor"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://recipes.tidymodels.org/reference/step_normalize.html">step_normalize</a></span><span class="op">(</span><span class="fu"><a href="https://recipes.tidymodels.org/reference/has_role.html">all_predictors</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="https://recipes.tidymodels.org/reference/step_normalize.html">step_normalize</a></span><span class="op">(</span><span class="fu"><a href="https://recipes.tidymodels.org/reference/has_role.html">all_numeric_predictors</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">test_recipe</span><span class="op">)</span></code></pre></div>
 <pre><code>## Data Recipe
@@ -129,7 +129,7 @@
 ## 
 ## Operations:
 ## 
-## Centering and scaling for all_predictors()</code></pre>
+## Centering and scaling for all_numeric_predictors()</code></pre>
 <p>Above, we not only define the roles of the relevant variables but also normalized all predictors to facilitate model fitting later on. In the next step, we use <code>additive</code> to set up a basic model structure.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/additive.html">additive</a></span><span class="op">(</span>
