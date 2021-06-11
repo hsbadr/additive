@@ -67,8 +67,6 @@
 #'   )
 #'
 #' summary(additive_mod$fit)
-#'
-#' # -------------------------------------------------------------------------
 #' @export
 additive <-
   function(mode = "regression",
@@ -193,6 +191,7 @@ translate.additive <- function(x, engine = x$engine, ...) {
 #' @return An updated model specification.
 #'
 #' @examples
+#'
 #' model <- additive(select = FALSE)
 #' model
 #' update(model, select = TRUE)

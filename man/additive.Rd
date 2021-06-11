@@ -324,7 +324,6 @@ additive_mod <-
 
 summary(additive_mod$fit)
 
-# -------------------------------------------------------------------------
 model <- additive(select = FALSE)
 model
 update(model, select = TRUE)
