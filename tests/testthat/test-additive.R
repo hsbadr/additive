@@ -65,4 +65,7 @@ test_that("additive execution", {
 
   # Check the predictions
   expect_equal(test_pred$.pred, gam_pred, tolerance = 0.1)
+
+  # Check the default engine
+  expect_equal(additive()$engine, "mgcv")
 })
