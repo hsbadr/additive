@@ -8,6 +8,7 @@
 \usage{
 additive(
   mode = "regression",
+  engine = "mgcv",
   fitfunc = NULL,
   formula.override = NULL,
   family = NULL,
@@ -88,9 +89,13 @@ additive(
 additive_fit(formula, data, ...)
 }
 \arguments{
-\item{mode}{A single character string for the type of model.
+\item{mode}{A single character string for the prediction outcome mode.
 Possible values for this model are "unknown", "regression", or
 "classification".}
+
+\item{engine}{A single character string specifying what computational
+engine to use for fitting. Possible engines are listed below.
+The default for this model is \code{"mgcv"}.}
 
 \item{fitfunc}{A named character vector that describes how to call
 a function for fitting a generalized additive model. This defaults
