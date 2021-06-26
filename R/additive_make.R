@@ -476,6 +476,47 @@ additive_make <- function(modes = c("classification", "regression")) {
           )
         )
       )
+
+      parsnip::set_pred(
+        model = model,
+        eng = engine,
+        mode = mode,
+        type = "pred_int",
+        value = list(
+          pre = NULL,
+          post = function(results, object) {
+            hf_lvl <- (1 - object$spec$method$pred$pred_int$extras$level) / 2
+            const <-
+              stats::qt(hf_lvl, df = object$fit$df.residual, lower.tail = FALSE)
+            trans <- object$fit$family$linkinv
+            res_2 <-
+              tibble::tibble(
+                lo = trans(results$fit - const * results$se.fit),
+                hi = trans(results$fit + const * results$se.fit)
+              )
+            res_1 <- res_2
+            res_1$lo <- 1 - res_2$hi
+            res_1$hi <- 1 - res_2$lo
+            lo_nms <- paste0(".pred_lower_", object$lvl)
+            hi_nms <- paste0(".pred_upper_", object$lvl)
+            colnames(res_1) <- c(lo_nms[1], hi_nms[1])
+            colnames(res_2) <- c(lo_nms[2], hi_nms[2])
+            res <- dplyr::bind_cols(res_1, res_2)
+
+            if (object$spec$method$pred$pred_int$extras$std_error) {
+              res$.std_error <- results$se.fit
+            }
+            res
+          },
+          func = predfunc,
+          args = list(
+            object = rlang::expr(object$fit),
+            newdata = rlang::expr(new_data),
+            type = "link",
+            se.fit = TRUE
+          )
+        )
+      )
     } else {
       parsnip::set_pred(
         model = model,
@@ -521,6 +562,45 @@ additive_make <- function(modes = c("classification", "regression")) {
             }
 
             if (object$spec$method$pred$conf_int$extras$std_error) {
+              res$.std_error <- results$se.fit
+            }
+            res
+          },
+          func = predfunc,
+          args = list(
+            object = rlang::expr(object$fit),
+            newdata = rlang::expr(new_data),
+            type = "link",
+            se.fit = TRUE
+          )
+        )
+      )
+
+      parsnip::set_pred(
+        model = model,
+        eng = engine,
+        mode = mode,
+        type = "pred_int",
+        value = list(
+          pre = NULL,
+          post = function(results, object) {
+            hf_lvl <- (1 - object$spec$method$pred$pred_int$extras$level) / 2
+            const <-
+              stats::qt(hf_lvl, df = object$fit$df.residual, lower.tail = FALSE)
+            trans <- object$fit$family$linkinv
+            res <-
+              tibble::tibble(
+                .pred_lower = trans(results$fit - const * results$se.fit),
+                .pred_upper = trans(results$fit + const * results$se.fit)
+              )
+            # In case of inverse or other links
+            if (any(res$.pred_upper < res$.pred_lower)) {
+              nms <- names(res)
+              res <- res[, 2:1]
+              names(res) <- nms
+            }
+
+            if (object$spec$method$pred$pred_int$extras$std_error) {
               res$.std_error <- results$se.fit
             }
             res
