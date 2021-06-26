@@ -63,6 +63,9 @@ test_that("additive execution", {
   expect_equal(test_fit$fit$method, "REML")
   expect_equal(test_fit$preproc$y_var, "y")
 
+  # Check the model coefficients
+  expect_equal(coef(test_fit$fit), coef(gam_fit))
+
   # Check the predictions
   expect_equal(test_pred$.pred, gam_pred, tolerance = 0.1)
 
