@@ -89,7 +89,7 @@
 </h1>
                         <h4 class="author">Hamada S. Badr</h4>
             
-            <h4 class="date">2021-06-25</h4>
+            <h4 class="date">2021-06-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/hsbadr/additive/blob/master/vignettes/GetStarted.Rmd"><code>vignettes/GetStarted.Rmd</code></a></small>
       <div class="hidden name"><code>GetStarted.Rmd</code></div>
@@ -222,16 +222,17 @@
 <code class="sourceCode R"><span class="va">test_workflow_fit</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span>
     new_data <span class="op">=</span> <span class="va">newdata</span>,
-    type <span class="op">=</span> <span class="st">"conf_int"</span>
+    type <span class="op">=</span> <span class="st">"conf_int"</span>,
+    level <span class="op">=</span> <span class="fl">0.95</span>
   <span class="op">)</span></code></pre></div>
 <pre><code>## # A tibble: 5 x 2
 ##   .pred_lower .pred_upper
 ##         &lt;dbl&gt;       &lt;dbl&gt;
-## 1        2.59        4.46
-## 2        4.89        6.49
-## 3        8.72       10.5 
-## 4        4.88        6.41
-## 5        2.95        4.58</code></pre>
+## 1        2.60        4.45
+## 2        4.90        6.48
+## 3        8.74       10.5 
+## 4        4.89        6.40
+## 5        2.97        4.57</code></pre>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
