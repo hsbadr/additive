@@ -9,7 +9,7 @@ Authors@R:
              role = c("aut", "cre"),
              comment = c(ORCID = "0000-0002-9808-2344")))
 Description: Fit Generalized Additive Models (GAM) using 'mgcv' with 'parsnip'/'tidymodels'
-    via 'additive' <doi:10.5281/zenodo.4882764>. 'tidymodels' is a collection of
+    via 'additive' <doi:10.5281/zenodo.5091179>. 'tidymodels' is a collection of
     packages for machine learning; see Kuhn and Wickham (2020) <https://www.tidymodels.org>).
     The technical details of 'mgcv' are described in Wood (2017)
     <doi:10.1201/9781315370279>.

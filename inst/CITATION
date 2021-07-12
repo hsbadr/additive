@@ -11,7 +11,7 @@ citEntry(entry = "Manual",
   year         = "2021",
   journal      = "Comprehensive R Archive Network (CRAN)",
   url          = "https://hsbadr.github.io/additive/",
-  doi          = "10.5281/zenodo.4882764",
+  doi          = "10.5281/zenodo.5091179",
   language     = "English",
   key          = "additive-manual",
 
