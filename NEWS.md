@@ -1,3 +1,7 @@
+# additive 0.0.3
+
+- Fixed class predictions for binary classification
+
 # additive 0.0.2
 
 - Added functionality to change to declare an engine in the model specification function.
