@@ -300,14 +300,10 @@ call. For this type of model, the template of the fit calls are:\if{html}{\out{<
   translate()
 }\if{html}{\out{</div>}}\preformatted{## Generalized Additive Model (GAM) Specification (regression)
 ## 
-## Main Arguments:
-##   family = stats::gaussian(link = "identity")
-## 
 ## Computational engine: mgcv 
 ## 
 ## Model fit template:
-## additive::additive_fit(formula = missing_arg(), data = missing_arg(), 
-##     family = stats::gaussian(link = "identity"))
+## additive::additive_fit(formula = missing_arg(), data = missing_arg())
 }
 }
 

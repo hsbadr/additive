@@ -1,6 +1,5 @@
 # additive 0.0.3
 
-- Set default family for classification and regression
 - Fixed class predictions for binary classification
 
 # additive 0.0.2
