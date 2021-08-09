@@ -1,6 +1,7 @@
 # additive 0.0.3
 
 - Fixed class predictions for binary classification
+- Replaced deprecated `pull_workflow_fit()`
 
 # additive 0.0.2
 

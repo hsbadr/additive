@@ -44,7 +44,7 @@ test_that("additive execution", {
 
   # Extract the fit object from the trained workflow
   test_fit <- test_workflow_fit %>%
-    pull_workflow_fit()
+    extract_fit_parsnip()
 
   # Generate predictions for the data head from the trained workflow
   test_pred <- predict(test_workflow_fit, head(dat))
