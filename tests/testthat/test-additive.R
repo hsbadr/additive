@@ -1,5 +1,3 @@
-context("additive model")
-
 test_that("additive execution", {
   skip_on_cran()
 
