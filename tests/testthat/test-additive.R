@@ -67,7 +67,7 @@ test_that("additive execution", {
   expect_equal(coef(test_fit$fit), coef(gam_fit))
 
   # Check the predictions
-  expect_equal(test_pred$.pred, gam_pred, tolerance = 0.1)
+  expect_equal(test_pred$.pred, gam_pred, ignore_attr = TRUE)
 
   # Check the default engine
   expect_equal(additive()$engine, "mgcv")
