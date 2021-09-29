@@ -65,7 +65,7 @@ For example, if we didn't specify the family initially or set it to something el
 that we now wanted to change, we could use the `update` method as follows
 
 
-````{r}
+```{r}
 test_model <- test_model %>%
   update(family = gaussian())
 ```
