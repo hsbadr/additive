@@ -12,7 +12,7 @@ Coverage](https://codecov.io/gh/hsbadr/additive/branch/main/graph/badge.svg)](ht
 [![Last
 commit](https://img.shields.io/github/last-commit/hsbadr/additive)](https://github.com/hsbadr/additive/commits/main)
 [![Commits since
-release](https://img.shields.io/github/commits-since/hsbadr/additive/latest.svg?color=green)](https://github.com/hsbadr/additive/commit/main/)
+release](https://img.shields.io/github/commits-since/hsbadr/additive/latest.svg?color=green)](https://github.com/hsbadr/additive/commit/main)
 [![R](https://github.com/hsbadr/additive/workflows/R/badge.svg)](https://github.com/hsbadr/additive/actions)
 
 [![CRAN
