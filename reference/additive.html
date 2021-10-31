@@ -241,10 +241,10 @@ The default for this model is <code>"mgcv"</code>.</p></td>
       <th>fitfunc</th>
       <td><p>A named character vector that describes how to call
 a function for fitting a generalized additive model. This defaults
-to <code><a href='https://rdrr.io/r/base/c.html'>c(pkg = "mgcv", fun = "gam")</a></code> (<code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>).
+to <code>c(pkg = "mgcv", fun = "gam")</code> (<code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>).
 <code>fitfunc</code> should have elements <code>pkg</code> and <code>fun</code>.
 The former is optional but is recommended and the latter is
-required. For example, <code><a href='https://rdrr.io/r/base/c.html'>c(pkg = "mgcv", fun = "bam")</a></code> would
+required. For example, <code>c(pkg = "mgcv", fun = "bam")</code> would
 be used to invoke <code><a href='https://rdrr.io/pkg/mgcv/man/bam.html'>bam</a></code> for big data.
 A user-specified function is also accepted provided that it is
 fully compatible with <code><a href='https://rdrr.io/pkg/mgcv/man/gam.html'>gam</a></code>.</p></td>
@@ -307,7 +307,7 @@ Different terms can use different numbers of knots, unless they share a covariat
       <td><p>A vector of smoothing parameters can be provided here.
  Smoothing parameters must be supplied in the order that the smooth terms appear in the model 
 formula. Negative elements indicate that the parameter should be estimated, and hence a mixture 
-of fixed and estimated parameters is possible. If smooths share smoothing parameters then <code><a href='https://rdrr.io/r/base/length.html'>length(sp)</a></code> 
+of fixed and estimated parameters is possible. If smooths share smoothing parameters then <code>length(sp)</code> 
 must correspond to the number of underlying smoothing parameters.</p></td>
     </tr>
     <tr>
@@ -315,7 +315,7 @@ must correspond to the number of underlying smoothing parameters.</p></td>
       <td><p>Lower bounds can be supplied for the smoothing parameters. Note
 that if this option is used then the smoothing parameters <code>full.sp</code>, in the 
 returned object, will need to be added to what is supplied here to get the 
- smoothing parameters actually multiplying the penalties. <code><a href='https://rdrr.io/r/base/length.html'>length(min.sp)</a></code> should 
+ smoothing parameters actually multiplying the penalties. <code>length(min.sp)</code> should 
 always be the same as the total number of penalties (so it may be longer than <code>sp</code>,
 if smooths share smoothing parameters).</p></td>
     </tr>
@@ -407,7 +407,7 @@ single machine). See details and example code.</p></td>
     <tr>
       <th>nthreads</th>
       <td><p>Number of threads to use for non-cluster computation (e.g. combining results from cluster nodes).
-If <code>NA</code> set to <code><a href='https://rdrr.io/r/base/Extremes.html'>max(1,length(cluster))</a></code>. See details.</p></td>
+If <code>NA</code> set to <code>max(1,length(cluster))</code>. See details.</p></td>
     </tr>
     <tr>
       <th>gc.level</th>
@@ -476,7 +476,7 @@ and <code><a href='https://rdrr.io/pkg/mgcv/man/t2.html'>t2</a></code>, can be a
       <th>data</th>
       <td><p>A data frame or list containing the model response variable and 
 covariates required by the formula. By default the variables are taken 
-from <code><a href='https://rdrr.io/r/base/environment.html'>environment(formula)</a></code>: typically the environment from 
+from <code>environment(formula)</code>: typically the environment from 
 which <code>gam</code> is called.</p></td>
     </tr>
     </table>
@@ -537,135 +537,144 @@ call. For this type of model, the template of the fit calls are:<div class="sour
 <code><a href='https://rdrr.io/r/stats/update.formula.html'>update.formula</a></code>.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'>additive</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (regression)
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div><div class='input'>
-<span class='fu'>show_model_info</span><span class='op'>(</span><span class='st'>"additive"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Information for `additive`
-#&gt;  modes: unknown, classification, regression 
-#&gt; 
-#&gt;  engines: 
-#&gt;    classification: mgcv
-#&gt;    regression:     mgcv
-#&gt; 
-#&gt;  arguments: 
-#&gt;    mgcv: 
-#&gt;       fitfunc            --&gt; fitfunc
-#&gt;       formula.override   --&gt; formula.override
-#&gt;       family             --&gt; family
-#&gt;       method             --&gt; method
-#&gt;       optimizer          --&gt; optimizer
-#&gt;       control            --&gt; control
-#&gt;       scale              --&gt; scale
-#&gt;       gamma              --&gt; gamma
-#&gt;       knots              --&gt; knots
-#&gt;       sp                 --&gt; sp
-#&gt;       min.sp             --&gt; min.sp
-#&gt;       paraPen            --&gt; paraPen
-#&gt;       chunk.size         --&gt; chunk.size
-#&gt;       rho                --&gt; rho
-#&gt;       AR.start           --&gt; AR.start
-#&gt;       H                  --&gt; H
-#&gt;       G                  --&gt; G
-#&gt;       offset             --&gt; offset
-#&gt;       weights            --&gt; weights
-#&gt;       subset             --&gt; subset
-#&gt;       start              --&gt; start
-#&gt;       etastart           --&gt; etastart
-#&gt;       mustart            --&gt; mustart
-#&gt;       drop.intercept     --&gt; drop.intercept
-#&gt;       drop.unused.levels --&gt; drop.unused.levels
-#&gt;       cluster            --&gt; cluster
-#&gt;       nthreads           --&gt; nthreads
-#&gt;       gc.level           --&gt; gc.level
-#&gt;       use.chol           --&gt; use.chol
-#&gt;       samfrac            --&gt; samfrac
-#&gt;       coef               --&gt; coef
-#&gt;       discrete           --&gt; discrete
-#&gt;       select             --&gt; select
-#&gt;       fit                --&gt; fit
-#&gt; 
-#&gt;  fit modules:
-#&gt;  engine           mode
-#&gt;    mgcv classification
-#&gt;    mgcv     regression
-#&gt; 
-#&gt;  prediction modules:
-#&gt;              mode engine                              methods
-#&gt;    classification   mgcv class, conf_int, pred_int, prob, raw
-#&gt;        regression   mgcv     conf_int, numeric, pred_int, raw
-#&gt; </div><div class='input'>
-<span class='fu'>additive</span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"classification"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (classification)
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div><div class='input'><span class='fu'>additive</span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"regression"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (regression)
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>2020</span><span class='op'>)</span>
-<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>gamSim</span><span class='op'>(</span><span class='fl'>1</span>, n <span class='op'>=</span> <span class='fl'>400</span>, dist <span class='op'>=</span> <span class='st'>"normal"</span>, scale <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Gu &amp; Wahba 4 term additive model</div><div class='input'>
-<span class='va'>additive_mod</span> <span class='op'>&lt;-</span>
-  <span class='fu'>additive</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>set_engine</span><span class='op'>(</span><span class='st'>"mgcv"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>fit</span><span class='op'>(</span>
-    <span class='va'>y</span> <span class='op'>~</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x0</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x1</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x2</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x3</span><span class='op'>)</span>,
-    data <span class='op'>=</span> <span class='va'>dat</span>
-  <span class='op'>)</span>
-
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>additive_mod</span><span class='op'>$</span><span class='va'>fit</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt; Family: gaussian 
-#&gt; Link function: identity 
-#&gt; 
-#&gt; Formula:
-#&gt; y ~ s(x0) + s(x1) + s(x2) + s(x3)
-#&gt; 
-#&gt; Parametric coefficients:
-#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
-#&gt; (Intercept)  7.89798    0.09692   81.49   &lt;2e-16 ***
-#&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#&gt; 
-#&gt; Approximate significance of smooth terms:
-#&gt;         edf Ref.df      F p-value    
-#&gt; s(x0) 5.785  6.916  7.744  &lt;2e-16 ***
-#&gt; s(x1) 2.959  3.680 78.625  &lt;2e-16 ***
-#&gt; s(x2) 8.315  8.866 86.414  &lt;2e-16 ***
-#&gt; s(x3) 2.419  3.015  1.016   0.388    
-#&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#&gt; 
-#&gt; R-sq.(adj) =   0.75   Deviance explained = 76.2%
-#&gt; GCV = 3.9601  Scale est. = 3.7574    n = 400</div><div class='input'>
-<span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'>additive</span><span class='op'>(</span>select <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-<span class='va'>model</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (regression)
-#&gt; 
-#&gt; Main Arguments:
-#&gt;   select = FALSE
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model</span>, select <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (regression)
-#&gt; 
-#&gt; Main Arguments:
-#&gt;   select = TRUE
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model</span>, select <span class='op'>=</span> <span class='cn'>TRUE</span>, fresh <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; Generalized Additive Model (GAM) Specification (regression)
-#&gt; 
-#&gt; Main Arguments:
-#&gt;   select = TRUE
-#&gt; 
-#&gt; Computational engine: mgcv 
-#&gt; </div></pre>
+    <pre class="examples"><span class='r-in'></span>
+<span class='r-in'><span class='fu'>additive</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (regression)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>show_model_info</span><span class='op'>(</span><span class='st'>"additive"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Information for `additive`</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  modes: unknown, classification, regression </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  engines: </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    classification: mgcv</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    regression:     mgcv</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  arguments: </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    mgcv: </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       fitfunc            --&gt; fitfunc</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       formula.override   --&gt; formula.override</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       family             --&gt; family</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       method             --&gt; method</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       optimizer          --&gt; optimizer</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       control            --&gt; control</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       scale              --&gt; scale</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       gamma              --&gt; gamma</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       knots              --&gt; knots</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       sp                 --&gt; sp</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       min.sp             --&gt; min.sp</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       paraPen            --&gt; paraPen</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       chunk.size         --&gt; chunk.size</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       rho                --&gt; rho</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       AR.start           --&gt; AR.start</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       H                  --&gt; H</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       G                  --&gt; G</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       offset             --&gt; offset</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       weights            --&gt; weights</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       subset             --&gt; subset</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       start              --&gt; start</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       etastart           --&gt; etastart</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       mustart            --&gt; mustart</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       drop.intercept     --&gt; drop.intercept</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       drop.unused.levels --&gt; drop.unused.levels</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       cluster            --&gt; cluster</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       nthreads           --&gt; nthreads</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       gc.level           --&gt; gc.level</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       use.chol           --&gt; use.chol</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       samfrac            --&gt; samfrac</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       coef               --&gt; coef</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       discrete           --&gt; discrete</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       select             --&gt; select</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       fit                --&gt; fit</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  fit modules:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  engine           mode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    mgcv classification</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    mgcv     regression</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  prediction modules:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              mode engine                              methods</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    classification   mgcv class, conf_int, pred_int, prob, raw</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        regression   mgcv     conf_int, numeric, pred_int, raw</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>additive</span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"classification"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (classification)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='fu'>additive</span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"regression"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (regression)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>2020</span><span class='op'>)</span></span>
+<span class='r-in'><span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>gamSim</span><span class='op'>(</span><span class='fl'>1</span>, n <span class='op'>=</span> <span class='fl'>400</span>, dist <span class='op'>=</span> <span class='st'>"normal"</span>, scale <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Gu &amp; Wahba 4 term additive model</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='va'>additive_mod</span> <span class='op'>&lt;-</span></span>
+<span class='r-in'>  <span class='fu'>additive</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span></span>
+<span class='r-in'>  <span class='fu'>set_engine</span><span class='op'>(</span><span class='st'>"mgcv"</span><span class='op'>)</span> <span class='op'>%&gt;%</span></span>
+<span class='r-in'>  <span class='fu'>fit</span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='va'>y</span> <span class='op'>~</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x0</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x1</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x2</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>x3</span><span class='op'>)</span>,</span>
+<span class='r-in'>    data <span class='op'>=</span> <span class='va'>dat</span></span>
+<span class='r-in'>  <span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>additive_mod</span><span class='op'>$</span><span class='va'>fit</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Family: gaussian </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Link function: identity </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Formula:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> y ~ s(x0) + s(x1) + s(x2) + s(x3)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Parametric coefficients:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> (Intercept)  7.89798    0.09692   81.49   &lt;2e-16 ***</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> ---</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Approximate significance of smooth terms:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         edf Ref.df      F p-value    </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> s(x0) 5.785  6.916  7.744  &lt;2e-16 ***</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> s(x1) 2.959  3.680 78.625  &lt;2e-16 ***</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> s(x2) 8.315  8.866 86.414  &lt;2e-16 ***</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> s(x3) 2.419  3.015  1.016   0.388    </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> ---</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> R-sq.(adj) =   0.75   Deviance explained = 76.2%</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> GCV = 3.9601  Scale est. = 3.7574    n = 400</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'>additive</span><span class='op'>(</span>select <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
+<span class='r-in'><span class='va'>model</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (regression)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Main Arguments:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   select = FALSE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model</span>, select <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (regression)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Main Arguments:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   select = TRUE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model</span>, select <span class='op'>=</span> <span class='cn'>TRUE</span>, fresh <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Generalized Additive Model (GAM) Specification (regression)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Main Arguments:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   select = TRUE</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Computational engine: mgcv </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
