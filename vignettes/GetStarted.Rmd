@@ -110,10 +110,11 @@ test_fit <- test_workflow_fit %>%
   extract_fit_parsnip()
 ```
 
-The `gamObject` object is stored in the `fit` slot
+The `gamObject` object can be extracted as follows
 
 ```{r eval = run_on_linux}
-gam_fit <- test_fit$fit
+gam_fit <- test_workflow_fit %>%
+  extract_fit_engine()
 ```
 
 ```{r eval = run_on_linux}
