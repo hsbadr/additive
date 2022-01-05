@@ -1,3 +1,9 @@
+# additive 0.0.4
+
+- Updated package dependencies and `WORDLIST`
+- Using `extract_fit_engine()` in `GetStarted` vignette
+- Set dependency by model's mode with `parsnip > 0.1.7`
+
 # additive 0.0.3
 
 - Fixed `GetStarted.Rmd` vignette build
@@ -10,8 +16,8 @@
 
 - Added functionality to change to declare an engine in the model specification function.
 - Updated `conf_int` predictions to respect the confidence level
-- Updated package dependencies and NAMESPACE
-- Updated README, citation, and vignettes
+- Updated package dependencies and `NAMESPACE`
+- Updated `README`, citation, and vignettes
 
 # additive 0.0.1
 
