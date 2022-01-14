@@ -1,7 +1,7 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
-=========================================================================================================================================================================
+# Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
 
 <!-- badges: start -->
 
@@ -29,73 +29,77 @@ Generalized Additive Models (GAM) using
 [`mgcv`](https://cran.r-project.org/package=mgcv) with
 [`parsnip`](https://parsnip.tidymodels.org/)/[`tidymodels`](https://www.tidymodels.org/).
 
-Installation
-------------
+## Installation
 
 The stable version of [`additive`](https://hsbadr.github.io/additive/)
 can be installed from
 [CRAN](https://CRAN.R-project.org/package=additive) using:
 
-    install.packages("additive")
+``` r
+install.packages("additive")
+```
 
 The development version of
 [`additive`](https://hsbadr.github.io/additive/) can be installed from
 [GitHub](https://github.com/hsbadr/additive) using:
 
-    install.packages("remotes")
-    remotes::install_github("hsbadr/additive")
+``` r
+install.packages("remotes")
+remotes::install_github("hsbadr/additive")
+```
 
-Example
--------
+## Example
 
-    library(additive)
+``` r
+library(additive)
 
-    set.seed(2020)
-    dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
+set.seed(2020)
+dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 
-    additive_mod <-
-      additive() %>%
-      set_engine("mgcv") %>%
-      fit(
-        y ~ s(x0) + s(x1) + s(x2) + s(x3),
-        data = dat
-      )
+additive_mod <-
+  additive() %>%
+  set_engine("mgcv") %>%
+  fit(
+    y ~ s(x0) + s(x1) + s(x2) + s(x3),
+    data = dat
+  )
 
-    summary(additive_mod$fit)
+summary(additive_mod$fit)
+```
 
 For more details, [get started with
 `additive`](https://hsbadr.github.io/additive/articles/GetStarted.html).
 
-Citation
---------
+## Citation
 
 To cite `additive` in publications, please use:
 
-    citation("additive")
+``` r
+citation("additive")
+```
 
 > Hamada S. Badr (2021): additive: Bindings for Generalized Additive
 > Models (GAM), [*Comprehensive R Archive Network
 > (CRAN)*](https://cran.r-project.org/package=additive). URL:
 > <https://hsbadr.github.io/additive/>.
 
-Contributing
-------------
+## Contributing
 
 This project is released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
--   For questions and discussions about tidymodels packages, modeling,
+  - For questions and discussions about tidymodels packages, modeling,
     and machine learning, please [post on RStudio
     Community](https://community.rstudio.com/).
 
--   If you think you have encountered a bug, please [submit an
+  - If you think you have encountered a bug, please [submit an
     issue](https://github.com/hsbadr/additive/issues).
 
--   Either way, learn how to create and share a
+  - Either way, learn how to create and share a
     [reprex](https://reprex.tidyverse.org) (a minimal, reproducible
     example), to clearly communicate about your code.
 
--   Check out further details on [contributing guidelines for tidymodels
+  - Check out further details on [contributing guidelines for tidymodels
     packages](https://www.tidymodels.org/contribute/) and [how to get
     help](https://www.tidymodels.org/help/).
