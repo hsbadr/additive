@@ -44,8 +44,8 @@ The development version of
 [GitHub](https://github.com/hsbadr/additive) using:
 
 ``` r
-install.packages("remotes")
-remotes::install_github("hsbadr/additive")
+install.packages("pak")
+pak::pkg_install("hsbadr/additive")
 ```
 
 ## Example
