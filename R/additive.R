@@ -1,4 +1,4 @@
-#' General Interface for Generalized Additive Models (GAM)
+#' General Interface for Additive TidyModels
 #'
 #' `additive()` is a way to generate a _specification_ of a model
 #'  before fitting and allows the model to be created using

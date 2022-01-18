@@ -1,7 +1,7 @@
 citHeader("To cite additive in publications, please use:")
 
 citEntry(entry = "Manual",
-  title        = "additive: Bindings for Generalized Additive Models (GAM)",
+  title        = "additive: Bindings for Additive TidyModels",
   author       = c(
                  person(given = "Hamada S.",
                         family = "Badr",
@@ -17,7 +17,7 @@ citEntry(entry = "Manual",
 
   textVersion  =
   paste("Hamada S. Badr (2021):",
-        "additive: Bindings for Generalized Additive Models (GAM),",
+        "additive: Bindings for Additive TidyModels,",
         "_Comprehensive R Archive Network (CRAN)_.",
         "URL: https://hsbadr.github.io/additive/")
 )

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
+# Bindings for Additive TidyModels [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
 
 <!-- badges: start -->
 
@@ -78,8 +78,8 @@ To cite `additive` in publications, please use:
 citation("additive")
 ```
 
-> Hamada S. Badr (2021): additive: Bindings for Generalized Additive
-> Models (GAM), [*Comprehensive R Archive Network
+> Hamada S. Badr (2021): additive: Bindings for Additive TidyModels,
+> [*Comprehensive R Archive Network
 > (CRAN)*](https://cran.r-project.org/package=additive). URL:
 > <https://hsbadr.github.io/additive/>.
 

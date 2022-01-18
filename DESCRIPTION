@@ -1,7 +1,7 @@
 Package: additive
 Type: Package
 Version: 0.0.4
-Title: Bindings for Generalized Additive Models (GAM)
+Title: Bindings for Additive TidyModels
 Authors@R:
     c(person(given = "Hamada S.",
              family = "Badr",

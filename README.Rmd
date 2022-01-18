@@ -13,8 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
-=========================================================================================================================================================================
+# Bindings for Additive TidyModels [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
 
 <!-- badges: start -->
 [![Lifecycle: Stable](https://img.shields.io/badge/Lifecycle-Stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
@@ -32,8 +31,7 @@ Bindings for Generalized Additive Models (GAM) [<img src="man/figures/additive.p
 [**`additive`**](https://hsbadr.github.io/additive/) supports Generalized Additive Models (GAM) using [`mgcv`](https://cran.r-project.org/package=mgcv)
 with [`parsnip`](https://parsnip.tidymodels.org/)/[`tidymodels`](https://www.tidymodels.org/).
 
-Installation
--------------
+## Installation
 
 The stable version of [`additive`](https://hsbadr.github.io/additive/) can be installed from [CRAN](https://CRAN.R-project.org/package=additive) using:
 
@@ -48,8 +46,7 @@ install.packages("pak")
 pak::pkg_install("hsbadr/additive")
 ```
 
-Example
--------
+## Example
 
 
 ``` r
@@ -71,8 +68,7 @@ summary(additive_mod$fit)
 
 For more details, [get started with `additive`](https://hsbadr.github.io/additive/articles/GetStarted.html).
 
-Citation
---------
+## Citation
 
 To cite `additive` in publications, please use:
 
@@ -80,12 +76,11 @@ To cite `additive` in publications, please use:
 citation("additive")
 ```
 
-> Hamada S. Badr (2021): additive: Bindings for Generalized Additive Models (GAM),
+> Hamada S. Badr (2021): additive: Bindings for Additive TidyModels,
 > [*Comprehensive R Archive Network (CRAN)*](https://cran.r-project.org/package=additive).
 > URL: [https://hsbadr.github.io/additive/](https://hsbadr.github.io/additive/).
 
-Contributing
-------------
+## Contributing
 
 This project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 

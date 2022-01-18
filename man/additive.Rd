@@ -4,7 +4,7 @@
 \alias{additive}
 \alias{update.additive}
 \alias{additive_fit}
-\title{General Interface for Generalized Additive Models (GAM)}
+\title{General Interface for Additive TidyModels}
 \usage{
 additive(
   mode = "regression",
