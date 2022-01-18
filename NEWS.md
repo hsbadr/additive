@@ -1,5 +1,8 @@
 # additive 0.0.4
 
+- Updated package website
+- Updated package `CITATION`
+- Updated package `DESCRIPTION` and `README`
 - Updated package dependencies and `WORDLIST`
 - Fixed threshold probability check for class predictions
 - Using `extract_fit_engine()` in `GetStarted` vignette
