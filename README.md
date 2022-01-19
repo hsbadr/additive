@@ -8,7 +8,7 @@
 [![Lifecycle:
 Stable](https://img.shields.io/badge/Lifecycle-Stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Codecov Test
-Coverage](https://codecov.io/gh/hsbadr/additive/branch/main/graph/badge.svg)](https://codecov.io/gh/hsbadr/additive?branch=main)
+Coverage](https://codecov.io/gh/hsbadr/additive/branch/main/graph/badge.svg)](https://app.codecov.io/gh/hsbadr/additive?branch=main)
 [![Last
 commit](https://img.shields.io/github/last-commit/hsbadr/additive)](https://github.com/hsbadr/additive/commits/main)
 [![Commits since

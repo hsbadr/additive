@@ -5,6 +5,7 @@
 - Updated package `DESCRIPTION` and `README`
 - Updated package dependencies and `WORDLIST`
 - Fixed threshold probability check for class predictions
+- Fixed possibly invalid URLs
 - Using `extract_fit_engine()` in `GetStarted` vignette
 - Set dependency by model's mode with `parsnip > 0.1.7`
 
