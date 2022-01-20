@@ -9,9 +9,9 @@ type: software
 license: MIT
 title: 'additive: Bindings for Additive TidyModels'
 version: 0.0.4
-doi: 10.5281/zenodo.5539481
+doi: 10.5281/zenodo.5884867
 abstract: Fit Generalized Additive Models (GAM) using 'mgcv' with 'parsnip'/'tidymodels'
-  via 'additive' <doi:10.5281/zenodo.5539481>. 'tidymodels' is a collection of packages
+  via 'additive' <doi:10.5281/zenodo.5884867>. 'tidymodels' is a collection of packages
   for machine learning; see Kuhn and Wickham (2020) <https://www.tidymodels.org>).
   The technical details of 'mgcv' are described in Wood (2017) <doi:10.1201/9781315370279>.
 authors:
@@ -30,7 +30,7 @@ preferred-citation:
   year: '2021'
   journal: Comprehensive R Archive Network (CRAN)
   url: https://hsbadr.github.io/additive/
-  doi: 10.5281/zenodo.5539481
+  doi: 10.5281/zenodo.5884867
 repository: https://CRAN.R-project.org/package=additive
 repository-code: https://github.com/hsbadr/additive
 url: https://hsbadr.github.io/additive/
