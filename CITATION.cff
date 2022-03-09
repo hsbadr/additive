@@ -71,6 +71,7 @@ references:
     given-names: Davis
     email: davis@rstudio.com
   year: '2022'
+  url: https://CRAN.R-project.org/package=parsnip
   version: '>= 0.1.7'
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
