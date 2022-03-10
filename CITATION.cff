@@ -58,7 +58,7 @@ references:
     email: simon.wood@r-project.org
   year: '2022'
   url: https://CRAN.R-project.org/package=mgcv
-  version: '>= 1.8-38'
+  version: '>= 1.8-39'
 - type: software
   title: parsnip
   abstract: 'parsnip: A Common API to Modeling and Analysis Functions'
@@ -72,7 +72,7 @@ references:
     email: davis@rstudio.com
   year: '2022'
   url: https://CRAN.R-project.org/package=parsnip
-  version: '>= 0.1.7'
+  version: '>= 0.2.0'
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
   notes: Depends
@@ -249,6 +249,7 @@ references:
     email: rich@rstudio.com
     orcid: https://orcid.org/0000-0003-3925-190X
   year: '2022'
+  url: https://CRAN.R-project.org/package=rmarkdown
 - type: software
   title: roxygen2
   abstract: 'roxygen2: In-Line Documentation for R'
