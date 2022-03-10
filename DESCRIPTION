@@ -18,8 +18,8 @@ URL: https://hsbadr.github.io/additive/,
      https://github.com/hsbadr/additive
 BugReports: https://github.com/hsbadr/additive/issues
 Depends:
-    mgcv (>= 1.8-38),
-    parsnip (>= 0.1.7),
+    mgcv (>= 1.8-39),
+    parsnip (>= 0.2.0),
     R (>= 3.6.0)
 Imports:
     dplyr,
