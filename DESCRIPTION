@@ -1,6 +1,6 @@
 Package: additive
 Type: Package
-Version: 0.0.4
+Version: 0.0.5
 Title: Bindings for Additive TidyModels
 Authors@R:
     c(person(given = "Hamada S.",
