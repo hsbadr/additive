@@ -1,3 +1,7 @@
+# additive 0.0.5
+
+- Updated package dependencies
+
 # additive 0.0.4
 
 - Updated package website
