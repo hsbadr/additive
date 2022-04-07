@@ -58,7 +58,7 @@ references:
     email: simon.wood@r-project.org
   year: '2022'
   url: https://CRAN.R-project.org/package=mgcv
-  version: '>= 1.8-39'
+  version: '>= 1.8-40'
 - type: software
   title: parsnip
   abstract: 'parsnip: A Common API to Modeling and Analysis Functions'
