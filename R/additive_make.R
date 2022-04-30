@@ -427,6 +427,9 @@ additive_make <- function(modes = c("classification", "regression")) {
           pre = NULL,
           post = function(results, object) {
             if (length(object$lvl) == 2) {
+              if (is.array(results)) {
+                results <- as.vector(results)
+              }
               results <- tibble::tibble(
                 v1 = 1 - results,
                 v2 = results

@@ -1,5 +1,6 @@
 # additive 0.0.5
 
+- Fixed inconsistent probability (`type = "prob"`) predictions for two-class models
 - Updated package dependencies
 
 # additive 0.0.4
