@@ -1,5 +1,6 @@
 # additive 0.0.5
 
+- Using `parsnip::update_spec()` if exists.
 - Fixed inconsistent probability (`type = "prob"`) predictions for two-class models
 - Updated package dependencies
 
