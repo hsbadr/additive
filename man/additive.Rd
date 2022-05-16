@@ -295,16 +295,20 @@ following \emph{engines}:
 }
 \section{Engine Details}{
 Engines may have pre-set default arguments when executing the model fit
-call. For this type of model, the template of the fit calls are:\if{html}{\out{<div class="sourceCode r">}}\preformatted{additive() \%>\%
+call. For this type of model, the template of the fit calls are:
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{additive() \%>\%
   set_engine("mgcv") \%>\%
   translate()
-}\if{html}{\out{</div>}}\preformatted{## Generalized Additive Model (GAM) Specification (regression)
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## Generalized Additive Model (GAM) Specification (regression)
 ## 
 ## Computational engine: mgcv 
 ## 
 ## Model fit template:
 ## additive::additive_fit(formula = missing_arg(), data = missing_arg())
-}
+}\if{html}{\out{</div>}}
 }
 
 \examples{
