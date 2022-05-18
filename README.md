@@ -1,4 +1,3 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # Bindings for Additive TidyModels [<img src="man/figures/additive.png" align="right" width="160" alt="additive logo" />](https://hsbadr.github.io/additive/)
@@ -35,37 +34,31 @@ The stable version of [`additive`](https://hsbadr.github.io/additive/)
 can be installed from
 [CRAN](https://CRAN.R-project.org/package=additive) using:
 
-``` r
-install.packages("additive")
-```
+    install.packages("additive")
 
 The development version of
 [`additive`](https://hsbadr.github.io/additive/) can be installed from
 [GitHub](https://github.com/hsbadr/additive) using:
 
-``` r
-install.packages("pak")
-pak::pkg_install("hsbadr/additive")
-```
+    install.packages("pak")
+    pak::pkg_install("hsbadr/additive")
 
 ## Example
 
-``` r
-library(additive)
+    library(additive)
 
-set.seed(2020)
-dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
+    set.seed(2020)
+    dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 
-additive_mod <-
-  additive() %>%
-  set_engine("mgcv") %>%
-  fit(
-    y ~ s(x0) + s(x1) + s(x2) + s(x3),
-    data = dat
-  )
+    additive_mod <-
+      additive() |>
+      set_engine("mgcv") |>
+      fit(
+        y ~ s(x0) + s(x1) + s(x2) + s(x3),
+        data = dat
+      )
 
-summary(additive_mod$fit)
-```
+    summary(additive_mod$fit)
 
 For more details, [get started with
 `additive`](https://hsbadr.github.io/additive/articles/GetStarted.html).
@@ -74,9 +67,7 @@ For more details, [get started with
 
 To cite `additive` in publications, please use:
 
-``` r
-citation("additive")
-```
+    citation("additive")
 
 > Hamada S. Badr (2021): additive: Bindings for Additive TidyModels,
 > [*Comprehensive R Archive Network

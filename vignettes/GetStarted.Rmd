@@ -30,10 +30,10 @@ dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 In a first step, we use the `recipes` package to prepare (a recipe for) the data.
 
 ```{r}
-test_recipe <- dat %>%
-  recipe() %>%
-  update_role(y, new_role = "outcome") %>%
-  update_role(x0, x1, x2, x3, new_role = "predictor") %>%
+test_recipe <- dat |>
+  recipe() |>
+  update_role(y, new_role = "outcome") |>
+  update_role(x0, x1, x2, x3, new_role = "predictor") |>
   step_normalize(all_numeric_predictors())
 ```
 
@@ -49,8 +49,8 @@ In the next step, we use `additive` to set up a basic model structure.
 test_model <- additive(
     family = gaussian(),
     method = "REML"
-  ) %>%
-  set_engine("mgcv") %>%
+  ) |>
+  set_engine("mgcv") |>
   set_mode("regression")
 ```
 
@@ -66,7 +66,7 @@ that we now wanted to change, we could use the `update` method as follows
 
 
 ```{r}
-test_model <- test_model %>%
+test_model <- test_model |>
   update(family = gaussian())
 ```
 
@@ -75,8 +75,8 @@ defined data processing recipe and the model plus the actual model formula to be
 passed to the `mgcv` engine.
 
 ```{r}
-test_workflow <- workflow() %>%
-  add_recipe(test_recipe) %>%
+test_workflow <- workflow() |>
+  add_recipe(test_recipe) |>
   add_model(
     spec = test_model,
     formula = y ~ s(x0) + s(x1) + s(x2) + s(x3)
@@ -95,7 +95,7 @@ run_on_linux <- grepl("linux", R.Version()$os, ignore.case = TRUE)
 ```
 
 ```{r results='hide', eval = run_on_linux}
-test_workflow_fit <- test_workflow %>%
+test_workflow_fit <- test_workflow |>
   fit(data = dat)
 ```
 
@@ -106,14 +106,14 @@ print(test_workflow_fit)
 To extract the parsnip model fit from the workflow
 
 ```{r eval = run_on_linux}
-test_fit <- test_workflow_fit %>%
+test_fit <- test_workflow_fit |>
   extract_fit_parsnip()
 ```
 
 The `gamObject` object can be extracted as follows
 
 ```{r eval = run_on_linux}
-gam_fit <- test_workflow_fit %>%
+gam_fit <- test_workflow_fit |>
   extract_fit_engine()
 ```
 
@@ -131,7 +131,7 @@ newdata <- dat[1:5, ]
 ```
 
 ```{r eval = run_on_linux}
-test_workflow_fit %>%
+test_workflow_fit |>
   predict(
     new_data = newdata,
     type = "conf_int",
@@ -142,7 +142,7 @@ test_workflow_fit %>%
 To add the standard errors on the scale of the linear predictors
 
 ```{r eval = run_on_linux}
-test_workflow_fit %>%
+test_workflow_fit |>
   predict(
     new_data = newdata,
     type = "conf_int",

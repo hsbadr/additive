@@ -63,8 +63,8 @@
 #' dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 #'
 #' additive_mod <-
-#'   additive() %>%
-#'   set_engine("mgcv") %>%
+#'   additive() |>
+#'   set_engine("mgcv") |>
 #'   fit(
 #'     y ~ s(x0) + s(x1) + s(x2) + s(x3),
 #'     data = dat

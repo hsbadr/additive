@@ -297,8 +297,8 @@ following \emph{engines}:
 Engines may have pre-set default arguments when executing the model fit
 call. For this type of model, the template of the fit calls are:
 
-\if{html}{\out{<div class="sourceCode r">}}\preformatted{additive() \%>\%
-  set_engine("mgcv") \%>\%
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{additive() |>
+  set_engine("mgcv") |>
   translate()
 }\if{html}{\out{</div>}}
 
@@ -324,8 +324,8 @@ set.seed(2020)
 dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 
 additive_mod <-
-  additive() \%>\%
-  set_engine("mgcv") \%>\%
+  additive() |>
+  set_engine("mgcv") |>
   fit(
     y ~ s(x0) + s(x1) + s(x2) + s(x3),
     data = dat
