@@ -100,7 +100,6 @@ before fitting and allows the model to be created using
   H <span class="op">=</span> <span class="cn">NULL</span>,
   G <span class="op">=</span> <span class="cn">NULL</span>,
   offset <span class="op">=</span> <span class="cn">NULL</span>,
-  weights <span class="op">=</span> <span class="cn">NULL</span>,
   subset <span class="op">=</span> <span class="cn">NULL</span>,
   start <span class="op">=</span> <span class="cn">NULL</span>,
   etastart <span class="op">=</span> <span class="cn">NULL</span>,
@@ -140,7 +139,6 @@ before fitting and allows the model to be created using
   H <span class="op">=</span> <span class="cn">NULL</span>,
   G <span class="op">=</span> <span class="cn">NULL</span>,
   offset <span class="op">=</span> <span class="cn">NULL</span>,
-  weights <span class="op">=</span> <span class="cn">NULL</span>,
   subset <span class="op">=</span> <span class="cn">NULL</span>,
   start <span class="op">=</span> <span class="cn">NULL</span>,
   etastart <span class="op">=</span> <span class="cn">NULL</span>,
@@ -264,11 +262,6 @@ defined on the response scale.</p></dd>
 that this offset will always be completely ignored when predicting, unlike an offset 
 included in <code>formula</code> (this used to conform to the behaviour of
 <code>lm</code> and <code>glm</code>).</p></dd>
-<dt>weights</dt>
-<dd><p>prior weights on the contribution of the data to the log likelihood. Note that a weight of 2, for example, 
-                is equivalent to having made exactly the same observation twice. If you want to re-weight the contributions 
-                of each datum without changing the overall magnitude of the log likelihood, then you should normalize the weights
-                (e.g. <code>weights &lt;- weights/mean(weights)</code>).</p></dd>
 <dt>subset</dt>
 <dd><p>an optional vector specifying a subset of observations to be
           used in the fitting process.</p></dd>
@@ -423,7 +416,6 @@ call. For this type of model, the template of the fit calls are:</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       H                  --&gt; H</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       G                  --&gt; G</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       offset             --&gt; offset</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       weights            --&gt; weights</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       subset             --&gt; subset</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       start              --&gt; start</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       etastart           --&gt; etastart</span>
