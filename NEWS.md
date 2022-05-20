@@ -2,6 +2,7 @@
 
 - Using base R pipe and depends on R >= 4.1.0
 - Using `parsnip::update_spec()` if exists.
+- Support the use of case weights
 - Fixed inconsistent probability (`type = "prob"`) predictions for two-class models
 - Updated package dependencies
 

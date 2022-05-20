@@ -202,15 +202,6 @@ additive_make <- function(modes = c("classification", "regression")) {
     parsnip::set_model_arg(
       model = model,
       eng = engine,
-      parsnip = "weights",
-      original = "weights",
-      func = fitfunc,
-      has_submodel = FALSE
-    )
-
-    parsnip::set_model_arg(
-      model = model,
-      eng = engine,
       parsnip = "subset",
       original = "subset",
       func = fitfunc,
@@ -351,7 +342,7 @@ additive_make <- function(modes = c("classification", "regression")) {
       mode = mode,
       value = list(
         interface = "formula",
-        protect = c("formula", "data"),
+        protect = c("formula", "data", "weights"),
         func = fitfunc,
         defaults = list()
       )

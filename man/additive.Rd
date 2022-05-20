@@ -27,7 +27,6 @@ additive(
   H = NULL,
   G = NULL,
   offset = NULL,
-  weights = NULL,
   subset = NULL,
   start = NULL,
   etastart = NULL,
@@ -66,7 +65,6 @@ additive(
   H = NULL,
   G = NULL,
   offset = NULL,
-  weights = NULL,
   subset = NULL,
   start = NULL,
   etastart = NULL,
@@ -192,11 +190,6 @@ that this offset will always be completely ignored when predicting, unlike an of
 included in \code{formula} (this used to conform to the behaviour of
 \code{lm} and \code{glm}).}
 
-\item{weights}{ prior weights on the contribution of the data to the log likelihood. Note that a weight of 2, for example, 
-                is equivalent to having made exactly the same observation twice. If you want to re-weight the contributions 
-                of each datum without changing the overall magnitude of the log likelihood, then you should normalize the weights
-                (e.g. \code{weights <- weights/mean(weights)}). }
-
 \item{subset}{ an optional vector specifying a subset of observations to be
           used in the fitting process.}
 
@@ -307,7 +300,8 @@ call. For this type of model, the template of the fit calls are:
 ## Computational engine: mgcv 
 ## 
 ## Model fit template:
-## additive::additive_fit(formula = missing_arg(), data = missing_arg())
+## additive::additive_fit(formula = missing_arg(), data = missing_arg(), 
+##     weights = missing_arg())
 }\if{html}{\out{</div>}}
 }
 
