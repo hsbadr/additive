@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   BugReports: BugReports.html
   GetStarted: GetStarted.html
-last_built: 2022-05-21T14:05Z
+last_built: 2022-05-21T15:11Z
 urls:
   reference: https://hsbadr.github.io/additive/reference
   article: https://hsbadr.github.io/additive/articles
