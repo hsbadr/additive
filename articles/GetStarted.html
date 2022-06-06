@@ -90,7 +90,7 @@
       <img src="" class="logo" alt=""><h1>Get started with `additive`</h1>
                         <h4 data-toc-skip class="author">Hamada S. Badr</h4>
             
-            <h4 data-toc-skip class="date">2022-05-30</h4>
+            <h4 data-toc-skip class="date">2022-06-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/hsbadr/additive/blob/HEAD/vignettes/GetStarted.Rmd" class="external-link"><code>vignettes/GetStarted.Rmd</code></a></small>
       <div class="d-none name"><code>GetStarted.Rmd</code></div>
@@ -208,11 +208,11 @@
 <p>To extract the parsnip model fit from the workflow</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test_fit</span> <span class="op">&lt;-</span> <span class="va">test_workflow_fit</span> |&gt;
-  <span class="fu"><a href="https://rdrr.io/pkg/hardhat/man/hardhat-extract.html" class="external-link">extract_fit_parsnip</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="https://hardhat.tidymodels.org/reference/hardhat-extract.html" class="external-link">extract_fit_parsnip</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>The <code>gamObject</code> object can be extracted as follows</p>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">gam_fit</span> <span class="op">&lt;-</span> <span class="va">test_workflow_fit</span> |&gt;
-  <span class="fu"><a href="https://rdrr.io/pkg/hardhat/man/hardhat-extract.html" class="external-link">extract_fit_engine</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="https://hardhat.tidymodels.org/reference/hardhat-extract.html" class="external-link">extract_fit_engine</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">gam_fit</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## [1] "gam" "glm" "lm"</span></code></pre>
