@@ -297,7 +297,7 @@ update.additive <-
     } else {
       args <- parsnip::update_main_parameters(args, parameters)
 
-      eng_args <- parsnip::update_engine_parameters(object$eng_args, ...)
+      eng_args <- parsnip::update_engine_parameters(object$eng_args, fresh = fresh, ...)
 
       if (fresh) {
         object$args <- args
