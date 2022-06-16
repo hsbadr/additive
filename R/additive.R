@@ -296,7 +296,7 @@ check_args.additive <- function(object) {
     check_func_val(args$fitfunc)
   }
 
-  if (!is.null(args$select) & !is.logical(args$select)) {
+  if (!is.null(args$select) && !is.logical(args$select)) {
     rlang::abort("`select` should be logical.")
   }
 
