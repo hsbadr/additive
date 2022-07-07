@@ -1,3 +1,7 @@
+# additive 1.0.0
+
+- Fixed handling of `extended.family` class
+
 # additive 0.0.5
 
 - Depends on `parsnip >= 1.0.0`
