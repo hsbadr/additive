@@ -4,7 +4,7 @@
 #' @importFrom purrr map_lgl
 #' @importFrom rlang !!! abort call2 enquo eval_tidy expr
 #' @importFrom stats qt
-#' @importFrom tibble tibble
+#' @importFrom tibble as_tibble tibble
 #' @importFrom utils globalVariables getFromNamespace
 
 # -------------------------------------------------------------------------

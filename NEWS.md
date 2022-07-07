@@ -1,6 +1,7 @@
 # additive 1.0.0
 
 - Fixed handling of `extended.family` class
+- Fixed multi-class probability (`type = "prob"`) predictions
 
 # additive 0.0.5
 

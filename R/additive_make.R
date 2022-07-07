@@ -433,6 +433,7 @@ additive_make <- function(modes = c("classification", "regression")) {
                 length(object$lvl) == ncol(results)
             ) {
               colnames(results) <- object$lvl
+              results <- tibble::as_tibble(results)
             } else {
               rlang::abort("Unexpected model predictions!")
             }
