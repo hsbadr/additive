@@ -506,6 +506,8 @@ additive_make <- function(modes = c("classification", "regression")) {
             object = rlang::expr(object$fit),
             newdata = rlang::expr(new_data),
             type = "response",
+            interval = "confidence",
+            level = rlang::expr(level),
             se.fit = TRUE
           )
         )
@@ -569,6 +571,8 @@ additive_make <- function(modes = c("classification", "regression")) {
             object = rlang::expr(object$fit),
             newdata = rlang::expr(new_data),
             type = "response",
+            interval = "prediction",
+            level = rlang::expr(level),
             se.fit = TRUE
           )
         )
@@ -626,6 +630,8 @@ additive_make <- function(modes = c("classification", "regression")) {
             object = rlang::expr(object$fit),
             newdata = rlang::expr(new_data),
             type = "response",
+            interval = "confidence",
+            level = rlang::expr(level),
             se.fit = TRUE
           )
         )
@@ -664,6 +670,8 @@ additive_make <- function(modes = c("classification", "regression")) {
             object = rlang::expr(object$fit),
             newdata = rlang::expr(new_data),
             type = "response",
+            interval = "prediction",
+            level = rlang::expr(level),
             se.fit = TRUE
           )
         )
