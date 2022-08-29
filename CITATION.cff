@@ -71,7 +71,6 @@ references:
     given-names: Davis
     email: davis@rstudio.com
   year: '2022'
-  url: https://CRAN.R-project.org/package=parsnip
   version: '>= 1.0.0'
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
@@ -172,6 +171,7 @@ references:
     given-names: Jim
     email: james.f.hester@gmail.com
   year: '2022'
+  url: https://CRAN.R-project.org/package=covr
 - type: software
   title: devtools
   abstract: 'devtools: Tools to Make Developing R Packages Easier'
