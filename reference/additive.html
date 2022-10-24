@@ -202,10 +202,11 @@ if <code>method</code> is set to a RE/ML method (McCullagh and Nelder, 1989, 9.6
 
 <dt>method</dt>
 <dd><p>The smoothing parameter estimation method. <code>"GCV.Cp"</code> to use GCV for unknown scale parameter and
-Mallows' Cp/UBRE/AIC for known scale. <code>"GACV.Cp"</code> is equivalent, but using GACV in place of GCV. <code>"REML"</code> 
+Mallows' Cp/UBRE/AIC for known scale. <code>"GACV.Cp"</code> is equivalent, but using GACV in place of GCV. <code>"NCV"</code>
+for neighbourhood cross-validation using the neighbourhood structure speficied be <code>nei</code>. <code>"REML"</code> 
 for REML estimation, including of unknown scale, <code>"P-REML"</code> for REML estimation, but using a Pearson estimate 
 of the scale. <code>"ML"</code> and <code>"P-ML"</code> are similar, but using maximum likelihood in place of REML. Beyond the 
-exponential family <code>"REML"</code> is the default, and the only other option is <code>"ML"</code>.</p></dd>
+exponential family <code>"REML"</code> is the default, and the only other options are <code>"ML"</code> or <code>"NCV"</code>.</p></dd>
 
 
 <dt>optimizer</dt>
