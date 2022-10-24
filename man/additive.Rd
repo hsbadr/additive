@@ -117,10 +117,11 @@ if \code{method} is set to a RE/ML method (McCullagh and Nelder, 1989, 9.6).
 }
 
 \item{method}{The smoothing parameter estimation method. \code{"GCV.Cp"} to use GCV for unknown scale parameter and
-Mallows' Cp/UBRE/AIC for known scale. \code{"GACV.Cp"} is equivalent, but using GACV in place of GCV. \code{"REML"} 
+Mallows' Cp/UBRE/AIC for known scale. \code{"GACV.Cp"} is equivalent, but using GACV in place of GCV. \code{"NCV"}
+for neighbourhood cross-validation using the neighbourhood structure speficied be \code{nei}. \code{"REML"} 
 for REML estimation, including of unknown scale, \code{"P-REML"} for REML estimation, but using a Pearson estimate 
 of the scale. \code{"ML"} and \code{"P-ML"} are similar, but using maximum likelihood in place of REML. Beyond the 
-exponential family \code{"REML"} is the default, and the only other option is \code{"ML"}.}
+exponential family \code{"REML"} is the default, and the only other options are \code{"ML"} or \code{"NCV"}.}
 
 \item{optimizer}{An array specifying the numerical optimization method to use to optimize the smoothing 
 parameter estimation criterion (given by \code{method}). \code{"perf"} (deprecated) for performance iteration. \code{"outer"} 
