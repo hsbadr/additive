@@ -88,9 +88,10 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Get started with `additive`</h1>
-                        <h4 data-toc-skip class="author">Hamada S. Badr</h4>
+                        <h4 data-toc-skip class="author">Hamada S.
+Badr</h4>
             
-            <h4 data-toc-skip class="date">2022-10-24</h4>
+            <h4 data-toc-skip class="date">2022-10-31</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/hsbadr/additive/blob/HEAD/vignettes/GetStarted.Rmd" class="external-link"><code>vignettes/GetStarted.Rmd</code></a></small>
       <div class="d-none name"><code>GetStarted.Rmd</code></div>
@@ -103,12 +104,14 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidymodels/recipes" class="external-link">recipes</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidymodels/workflows" class="external-link">workflows</a></span><span class="op">)</span></span></code></pre></div>
-<p>Let’s simulate a data using <code>mgcv</code> package, which is automatically loaded by <code>additive</code>.</p>
+<p>Let’s simulate a data using <code>mgcv</code> package, which is
+automatically loaded by <code>additive</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2020</span><span class="op">)</span></span>
 <span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gamSim.html" class="external-link">gamSim</a></span><span class="op">(</span><span class="fl">1</span>, n <span class="op">=</span> <span class="fl">400</span>, dist <span class="op">=</span> <span class="st">"normal"</span>, scale <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Gu &amp; Wahba 4 term additive model</span></span></code></pre>
-<p>In a first step, we use the <code>recipes</code> package to prepare (a recipe for) the data.</p>
+<p>In a first step, we use the <code>recipes</code> package to prepare
+(a recipe for) the data.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_recipe</span> <span class="op">&lt;-</span> <span class="va">dat</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://recipes.tidymodels.org/reference/recipe.html" class="external-link">recipe</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -130,7 +133,10 @@
 <span><span class="co">## Operations:</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Centering and scaling for all_numeric_predictors()</span></span></code></pre>
-<p>Above, we not only define the roles of the relevant variables but also normalized all numeric predictors to facilitate model fitting later on. In the next step, we use <code>additive</code> to set up a basic model structure.</p>
+<p>Above, we not only define the roles of the relevant variables but
+also normalized all numeric predictors to facilitate model fitting later
+on. In the next step, we use <code>additive</code> to set up a basic
+model structure.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/additive.html">additive</a></span><span class="op">(</span></span>
 <span>  family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">gaussian</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -147,11 +153,20 @@
 <span><span class="co">##   method = REML</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Computational engine: mgcv</span></span></code></pre>
-<p>The <code>additive</code> function is the main function of the package to initialize a Generalized Additive Model (GAM). We can set up a lot of the information directly within the function or update the information later on, via the <code>update</code> method. For example, if we didn’t specify the family initially or set it to something else that we now wanted to change, we could use the <code>update</code> method as follows</p>
+<p>The <code>additive</code> function is the main function of the
+package to initialize a Generalized Additive Model (GAM). We can set up
+a lot of the information directly within the function or update the
+information later on, via the <code>update</code> method. For example,
+if we didn’t specify the family initially or set it to something else
+that we now wanted to change, we could use the <code>update</code>
+method as follows</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_model</span> <span class="op">&lt;-</span> <span class="va">test_model</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/update.html" class="external-link">update</a></span><span class="op">(</span>family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html" class="external-link">gaussian</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Next, we define a workflow via the <code>workflows</code> package, by combining the above defined data processing recipe and the model plus the actual model formula to be passed to the <code>mgcv</code> engine.</p>
+<p>Next, we define a workflow via the <code>workflows</code> package, by
+combining the above defined data processing recipe and the model plus
+the actual model formula to be passed to the <code>mgcv</code>
+engine.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_workflow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://workflows.tidymodels.org/reference/workflow.html" class="external-link">workflow</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://workflows.tidymodels.org/reference/add_recipe.html" class="external-link">add_recipe</a></span><span class="op">(</span><span class="va">test_recipe</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -178,7 +193,8 @@
 <span><span class="co">##   method = REML</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Computational engine: mgcv</span></span></code></pre>
-<p>We are now ready to fit the model by calling the <code>fit</code> method with the data set we want to train the model on.</p>
+<p>We are now ready to fit the model by calling the <code>fit</code>
+method with the data set we want to train the model on.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_workflow_fit</span> <span class="op">&lt;-</span> <span class="va">test_workflow</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://generics.r-lib.org/reference/fit.html" class="external-link">fit</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span></code></pre></div>
@@ -216,7 +232,10 @@
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">gam_fit</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## [1] "gam" "glm" "lm"</span></span></code></pre>
-<p>We can use the trained workflow, which includes the fitted model, to conveniently <code>predict</code> using new data without having to worry about all the data reprocessing, which is automatically applied using the workflow preprocessor (recipe).</p>
+<p>We can use the trained workflow, which includes the fitted model, to
+conveniently <code>predict</code> using new data without having to worry
+about all the data reprocessing, which is automatically applied using
+the workflow preprocessor (recipe).</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">newdata</span> <span class="op">&lt;-</span> <span class="va">dat</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="op">]</span></span></code></pre></div>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
@@ -228,7 +247,7 @@
 <span>  <span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 5 × 2</span></span></span>
 <span><span class="co">##   .pred_lower .pred_upper</span></span>
-<span><span class="co">##         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">##     <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span></span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">1</span>        2.60        4.45</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">2</span>        4.90        6.48</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">3</span>        8.74       10.5 </span></span>
@@ -245,7 +264,7 @@
 <span>  <span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 5 × 3</span></span></span>
 <span><span class="co">##   .pred_lower .pred_upper .std_error</span></span>
-<span><span class="co">##         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">##     <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span></span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">1</span>        2.60        4.45      0.470</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">2</span>        4.90        6.48      0.401</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">3</span>        8.74       10.5       0.457</span></span>
