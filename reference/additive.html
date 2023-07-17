@@ -203,18 +203,17 @@ if <code>method</code> is set to a RE/ML method (McCullagh and Nelder, 1989, 9.6
 <dt>method</dt>
 <dd><p>The smoothing parameter estimation method. <code>"GCV.Cp"</code> to use GCV for unknown scale parameter and
 Mallows' Cp/UBRE/AIC for known scale. <code>"GACV.Cp"</code> is equivalent, but using GACV in place of GCV. <code>"NCV"</code>
-for neighbourhood cross-validation using the neighbourhood structure speficied be <code>nei</code>. <code>"REML"</code> 
+for neighbourhood cross-validation using the neighbourhood structure speficied by <code>nei</code> (<code>"QNCV"</code> for numerically more ribust version).  <code>"REML"</code> 
 for REML estimation, including of unknown scale, <code>"P-REML"</code> for REML estimation, but using a Pearson estimate 
 of the scale. <code>"ML"</code> and <code>"P-ML"</code> are similar, but using maximum likelihood in place of REML. Beyond the 
-exponential family <code>"REML"</code> is the default, and the only other options are <code>"ML"</code> or <code>"NCV"</code>.</p></dd>
+exponential family <code>"REML"</code> is the default, and the only other options are <code>"ML"</code>, <code>"NCV"</code> or <code>"QNCV"</code>.</p></dd>
 
 
 <dt>optimizer</dt>
 <dd><p>An array specifying the numerical optimization method to use to optimize the smoothing 
-parameter estimation criterion (given by <code>method</code>). <code>"perf"</code> (deprecated) for performance iteration. <code>"outer"</code> 
-for the more stable direct approach. <code>"outer"</code> can use several alternative optimizers, specified in the 
-second element of <code>optimizer</code>: <code>"newton"</code> (default), <code>"bfgs"</code>, <code>"optim"</code>, <code>"nlm"</code> 
-and <code>"nlm.fd"</code> (the latter is based entirely on finite differenced derivatives and is very slow). <code>"efs"</code>
+parameter estimation criterion (given by <code>method</code>). <code>"outer"</code> 
+for the direct nested optimization approach. <code>"outer"</code> can use several alternative optimizers, specified in the 
+second element of <code>optimizer</code>: <code>"newton"</code> (default), <code>"bfgs"</code>, <code>"optim"</code> or <code>"nlm"</code>. <code>"efs"</code>
 for the extended Fellner Schall method of Wood and Fasiolo (2017).</p></dd>
 
 
@@ -321,7 +320,7 @@ included in <code>formula</code> (this used to conform to the behaviour of
 
 
 <dt>drop.intercept</dt>
-<dd><p>Set to <code>TRUE</code> to force the model to really not have the a constant in the parametric model part,
+<dd><p>Set to <code>TRUE</code> to force the model to really not have a constant in the parametric model part,
 even with factor variables present. Can be vector when <code>formula</code> is a list.</p></dd>
 
 
