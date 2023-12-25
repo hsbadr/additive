@@ -229,7 +229,7 @@ Note that (RE)ML methods can only work with scale parameter 1 for the Poisson an
 
 
 <dt>gamma</dt>
-<dd><p>Increase this beyond 1 to produce smoother models. <code>gamma</code> multiplies the effective degrees of freedom in the GCV or UBRE/AIC. coden/gamma can be viewed as an effective sample size in the GCV score, and this also enables it to be used with REML/ML. Ignored with P-RE/ML or the <code>efs</code> optimizer.</p></dd>
+<dd><p>Increase this beyond 1 to produce smoother models. <code>gamma</code> multiplies the effective degrees of freedom in the GCV or UBRE/AIC. <code>n/gamma</code> can be viewed as an effective sample size in the GCV score, and this also enables it to be used with REML/ML. Ignored with P-RE/ML or the <code>efs</code> optimizer.</p></dd>
 
 
 <dt>knots</dt>
@@ -342,7 +342,7 @@ If <code>NA</code> set to <code>max(1,length(cluster))</code>. See details.</p><
 
 <dt>gc.level</dt>
 <dd><p>to keep the memory footprint down, it can help to call the garbage collector often, but this takes 
-a substatial amount of time. Setting this to zero means that garbage collection only happens when R decides it should. Setting to 2 gives frequent garbage collection. 1 is in between. Not as much of a problem as it used to be.</p></dd>
+a substatial amount of time. Setting this to zero means that garbage collection only happens when R decides it should. Setting to 2 gives frequent garbage collection. 1 is in between. Not as much of a problem as it used to be, but can really matter for very large datasets.</p></dd>
 
 
 <dt>use.chol</dt>
