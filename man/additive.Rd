@@ -137,7 +137,7 @@ scale parameter is unknown. 0 signals that the scale parameter is 1  for Poisson
 Note that (RE)ML methods can only work with scale parameter 1 for the Poisson and binomial cases.    
 }
 
-\item{gamma}{Increase this beyond 1 to produce smoother models. \code{gamma} multiplies the effective degrees of freedom in the GCV or UBRE/AIC. code{n/gamma} can be viewed as an effective sample size in the GCV score, and this also enables it to be used with REML/ML. Ignored with P-RE/ML or the \code{efs} optimizer. }
+\item{gamma}{Increase this beyond 1 to produce smoother models. \code{gamma} multiplies the effective degrees of freedom in the GCV or UBRE/AIC. \code{n/gamma} can be viewed as an effective sample size in the GCV score, and this also enables it to be used with REML/ML. Ignored with P-RE/ML or the \code{efs} optimizer. }
 
 \item{knots}{this is an optional list containing user specified knot values to be used for basis construction. 
 For most bases the user simply supplies the knots to be used, which must match up with the \code{k} value
@@ -214,7 +214,7 @@ single machine). See details and example code.
 If \code{NA} set to \code{max(1,length(cluster))}. See details.}
 
 \item{gc.level}{to keep the memory footprint down, it can help to call the garbage collector often, but this takes 
-a substatial amount of time. Setting this to zero means that garbage collection only happens when R decides it should. Setting to 2 gives frequent garbage collection. 1 is in between. Not as much of a problem as it used to be.
+a substatial amount of time. Setting this to zero means that garbage collection only happens when R decides it should. Setting to 2 gives frequent garbage collection. 1 is in between. Not as much of a problem as it used to be, but can really matter for very large datasets.
 }
 
 \item{use.chol}{By default \code{bam} uses a very stable QR update approach to obtaining the QR decomposition
