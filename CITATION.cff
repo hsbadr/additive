@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.5.0
+# CITATION file created with {cffr} R package, v1.0.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -11,9 +11,9 @@ title: 'additive: Bindings for Additive TidyModels'
 version: 1.0.0
 doi: 10.5281/zenodo.6654298
 abstract: Fit Generalized Additive Models (GAM) using 'mgcv' with 'parsnip'/'tidymodels'
-  via 'additive' <doi:10.5281/zenodo.6654298>. 'tidymodels' is a collection of packages
-  for machine learning; see Kuhn and Wickham (2020) <https://www.tidymodels.org>).
-  The technical details of 'mgcv' are described in Wood (2017) <doi:10.1201/9781315370279>.
+  via 'additive' <https://doi.org/10.5281/zenodo.6654298>. 'tidymodels' is a collection
+  of packages for machine learning; see Kuhn and Wickham (2020) <https://www.tidymodels.org>).
+  The technical details of 'mgcv' are described in Wood (2017) <https://doi.org/10.1201/9781315370279>.
 authors:
 - family-names: Badr
   given-names: Hamada S.
@@ -80,11 +80,10 @@ references:
   url: https://www.R-project.org/
   authors:
   - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2024'
   institution:
     name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2024'
   version: '>= 4.1.0'
 - type: software
   title: dplyr
@@ -145,11 +144,10 @@ references:
   notes: Imports
   authors:
   - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2024'
   institution:
     name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2024'
 - type: software
   title: tibble
   abstract: 'tibble: Simple Data Frames'
@@ -171,11 +169,10 @@ references:
   notes: Imports
   authors:
   - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2024'
   institution:
     name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2024'
 - type: software
   title: covr
   abstract: 'covr: Test Coverage for Packages'
