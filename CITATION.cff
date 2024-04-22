@@ -58,7 +58,7 @@ references:
     given-names: Simon
     email: simon.wood@r-project.org
   year: '2024'
-  version: '>= 1.8-40'
+  version: '>= 1.9-1'
 - type: software
   title: parsnip
   abstract: 'parsnip: A Common API to Modeling and Analysis Functions'
@@ -73,7 +73,7 @@ references:
     given-names: Davis
     email: davis@posit.co
   year: '2024'
-  version: '>= 1.0.0'
+  version: '>= 1.2.1'
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
   notes: Depends
