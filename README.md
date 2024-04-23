@@ -20,7 +20,7 @@ Status](https://www.r-pkg.org/badges/version/additive)](https://CRAN.R-project.o
 Downloads](https://cranlogs.r-pkg.org/badges/grand-total/additive)](https://cran.r-project.org/package=additive)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/hsbadr/additive/blob/main/LICENSE.md)
-[![DOI](https://zenodo.org/badge/369646227.svg)](https://zenodo.org/badge/latestdoi/369646227)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4784245.svg)](https://zenodo.org/records/4784245)
 <!-- badges: end -->
 
 [**`additive`**](https://hsbadr.github.io/additive/) supports
