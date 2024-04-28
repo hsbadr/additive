@@ -8,7 +8,7 @@ message: 'To cite package "additive" in publications use:'
 type: software
 license: MIT
 title: 'additive: Bindings for Additive TidyModels'
-version: 1.0.0
+version: 1.0.1
 doi: 10.5281/zenodo.4784245
 abstract: Fit Generalized Additive Models (GAM) using 'mgcv' with 'parsnip'/'tidymodels'
   via 'additive' <https://doi.org/10.5281/zenodo.4784245>. 'tidymodels' is a collection
