@@ -1,6 +1,7 @@
 citHeader("To cite additive in publications, please use:")
 
-citEntry(entry = "Manual",
+bibentry(
+  bibtype      = "Manual",
   title        = "additive: Bindings for Additive TidyModels",
   author       = c(
                  person(given = "Hamada S.",
@@ -8,7 +9,7 @@ citEntry(entry = "Manual",
                         email = "badr@jhu.edu",
                         role = c("aut", "cre"),
                         comment = c(ORCID = "0000-0002-9808-2344"))),
-  year         = "2021",
+  year         = "2024",
   journal      = "Comprehensive R Archive Network (CRAN)",
   url          = "https://hsbadr.github.io/additive/",
   doi          = "10.5281/zenodo.4784245",
@@ -16,7 +17,7 @@ citEntry(entry = "Manual",
   key          = "additive-manual",
 
   textVersion  =
-  paste("Hamada S. Badr (2021):",
+  paste("Hamada S. Badr (2024):",
         "additive: Bindings for Additive TidyModels,",
         "_Comprehensive R Archive Network (CRAN)_.",
         "URL: https://hsbadr.github.io/additive/")

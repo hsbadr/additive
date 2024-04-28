@@ -69,7 +69,7 @@ To cite `additive` in publications, please use:
 
     citation("additive")
 
-> Hamada S. Badr (2021): additive: Bindings for Additive TidyModels,
+> Hamada S. Badr (2024): additive: Bindings for Additive TidyModels,
 > [*Comprehensive R Archive Network
 > (CRAN)*](https://cran.r-project.org/package=additive). URL:
 > <https://hsbadr.github.io/additive/>.
