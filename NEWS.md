@@ -1,3 +1,9 @@
+# additive 1.0.1
+
+- Built vignettes to fix CRAN warnings
+- Replaced `citEntry()` with `bibentry()`
+- Updated citation and invalid URLs
+
 # additive 1.0.0
 
 - Fixed handling of `extended.family` class
