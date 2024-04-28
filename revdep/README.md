@@ -2,7 +2,7 @@
 
 |field    |value                                                  |
 |:--------|:------------------------------------------------------|
-|version  |R Under development (unstable) (2024-04-22 r86468)     |
+|version  |R Under development (unstable) (2024-04-24 r86484)     |
 |os       |Ubuntu 22.04.4 LTS                                     |
 |system   |x86_64, linux-gnu                                      |
 |ui       |X11                                                    |
@@ -10,14 +10,14 @@
 |collate  |C.UTF-8                                                |
 |ctype    |C.UTF-8                                                |
 |tz       |UTC                                                    |
-|date     |2024-04-23                                             |
+|date     |2024-04-28                                             |
 |pandoc   |3.1.11 @ /opt/hostedtoolcache/pandoc/3.1.11/x64/pandoc |
 
 # Dependencies
 
 |package      |old    |new    |Δ  |
 |:------------|:------|:------|:--|
-|additive     |0.0.5  |1.0.0  |*  |
+|additive     |0.0.5  |1.0.1  |*  |
 |cli          |3.6.2  |3.6.2  |   |
 |colorspace   |2.1-0  |2.1-0  |   |
 |cpp11        |0.4.7  |0.4.7  |   |
