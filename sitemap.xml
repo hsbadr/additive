@@ -1,45 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://hsbadr.github.io/additive/404.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/SUPPORT.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/articles/BugReports.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/articles/GetStarted.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/index.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/reference/additive.html</loc>
-  </url>
-  <url>
-    <loc>https://hsbadr.github.io/additive/reference/index.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://hsbadr.github.io/additive/404.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/CONTRIBUTING.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/LICENSE-text.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/LICENSE.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/SUPPORT.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/articles/BugReports.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/articles/GetStarted.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/articles/index.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/authors.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/index.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/news/index.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/reference/additive.html</loc></url>
+<url><loc>https://hsbadr.github.io/additive/reference/index.html</loc></url>
 </urlset>
+
