@@ -60,7 +60,7 @@ references:
   - family-names: Wood
     given-names: Simon
     email: simon.wood@r-project.org
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.mgcv
   version: '>= 1.9-1'
 - type: software
@@ -76,7 +76,7 @@ references:
   - family-names: Vaughan
     given-names: Davis
     email: davis@posit.co
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.parsnip
   version: '>= 1.2.1'
 - type: software
@@ -88,7 +88,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2024'
+  year: '2025'
   version: '>= 4.1.0'
 - type: software
   title: dplyr
@@ -113,7 +113,7 @@ references:
     given-names: Davis
     email: davis@posit.co
     orcid: https://orcid.org/0000-0003-4777-038X
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.dplyr
 - type: software
   title: purrr
@@ -129,7 +129,7 @@ references:
   - family-names: Henry
     given-names: Lionel
     email: lionel@rstudio.com
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.purrr
 - type: software
   title: rlang
@@ -144,7 +144,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.rlang
 - type: software
   title: stats
@@ -155,7 +155,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2024'
+  year: '2025'
 - type: software
   title: tibble
   abstract: 'tibble: Simple Data Frames'
@@ -170,7 +170,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@rstudio.com
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.tibble
 - type: software
   title: utils
@@ -181,7 +181,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2024'
+  year: '2025'
 - type: software
   title: covr
   abstract: 'covr: Test Coverage for Packages'
@@ -192,7 +192,7 @@ references:
   - family-names: Hester
     given-names: Jim
     email: james.f.hester@gmail.com
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.covr
 - type: software
   title: devtools
@@ -211,7 +211,7 @@ references:
     given-names: Jennifer
     email: jenny@rstudio.com
     orcid: https://orcid.org/0000-0002-6983-2759
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.devtools
 - type: software
   title: knitr
@@ -224,7 +224,7 @@ references:
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.knitr
 - type: software
   title: recipes
@@ -242,7 +242,7 @@ references:
   - family-names: Hvitfeldt
     given-names: Emil
     email: emil.hvitfeldt@posit.co
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.recipes
 - type: software
   title: rmarkdown
@@ -286,7 +286,7 @@ references:
     given-names: Richard
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.rmarkdown
 - type: software
   title: roxygen2
@@ -307,7 +307,7 @@ references:
     email: csardi.gabor@gmail.com
   - family-names: Eugster
     given-names: Manuel
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.roxygen2
 - type: software
   title: spelling
@@ -323,7 +323,7 @@ references:
   - family-names: Hester
     given-names: Jim
     email: james.hester@rstudio.com
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.spelling
 - type: software
   title: testthat
@@ -335,7 +335,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.testthat
 - type: software
   title: workflows
@@ -351,6 +351,6 @@ references:
     given-names: Simon
     email: simon.couch@posit.co
     orcid: https://orcid.org/0000-0001-5676-5107
-  year: '2024'
+  year: '2025'
   doi: 10.32614/CRAN.package.workflows
 
