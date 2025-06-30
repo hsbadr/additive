@@ -89,6 +89,7 @@ references:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
   year: '2025'
+  doi: 10.32614/R.manuals
   version: '>= 4.1.0'
 - type: software
   title: dplyr
@@ -156,6 +157,7 @@ references:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
   year: '2025'
+  doi: 10.32614/R.manuals
 - type: software
   title: tibble
   abstract: 'tibble: Simple Data Frames'
@@ -182,6 +184,7 @@ references:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
   year: '2025'
+  doi: 10.32614/R.manuals
 - type: software
   title: covr
   abstract: 'covr: Test Coverage for Packages'
