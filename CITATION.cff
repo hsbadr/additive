@@ -60,7 +60,7 @@ references:
   - family-names: Wood
     given-names: Simon
     email: simon.wood@r-project.org
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.mgcv
   version: '>= 1.9-1'
 - type: software
@@ -77,7 +77,7 @@ references:
   - family-names: Vaughan
     given-names: Davis
     email: davis@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.parsnip
   version: '>= 1.2.1'
 - type: software
@@ -89,7 +89,7 @@ references:
   institution:
     name: 'R Foundation for Statistical Computing (ROR: <https://ror.org/05qewa988>)'
     address: Vienna, Austria
-  year: '2025'
+  year: '2026'
   doi: 10.32614/R.manuals
   version: '>= 4.1.0'
 - type: software
@@ -115,7 +115,7 @@ references:
     given-names: Davis
     email: davis@posit.co
     orcid: https://orcid.org/0000-0003-4777-038X
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.dplyr
 - type: software
   title: purrr
@@ -131,7 +131,7 @@ references:
   - family-names: Henry
     given-names: Lionel
     email: lionel@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.purrr
 - type: software
   title: rlang
@@ -146,7 +146,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.rlang
 - type: software
   title: stats
@@ -157,7 +157,7 @@ references:
   institution:
     name: 'R Foundation for Statistical Computing (ROR: <https://ror.org/05qewa988>)'
     address: Vienna, Austria
-  year: '2025'
+  year: '2026'
   doi: 10.32614/R.manuals
 - type: software
   title: tibble
@@ -173,7 +173,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@rstudio.com
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.tibble
 - type: software
   title: utils
@@ -184,7 +184,7 @@ references:
   institution:
     name: 'R Foundation for Statistical Computing (ROR: <https://ror.org/05qewa988>)'
     address: Vienna, Austria
-  year: '2025'
+  year: '2026'
   doi: 10.32614/R.manuals
 - type: software
   title: covr
@@ -196,7 +196,7 @@ references:
   - family-names: Hester
     given-names: Jim
     email: james.f.hester@gmail.com
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.covr
 - type: software
   title: devtools
@@ -215,7 +215,7 @@ references:
     given-names: Jennifer
     email: jenny@posit.co
     orcid: https://orcid.org/0000-0002-6983-2759
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.devtools
 - type: software
   title: knitr
@@ -228,7 +228,7 @@ references:
     given-names: Yihui
     email: xie@yihui.name
     orcid: https://orcid.org/0000-0003-0645-5666
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.knitr
 - type: software
   title: recipes
@@ -246,7 +246,7 @@ references:
   - family-names: Hvitfeldt
     given-names: Emil
     email: emil.hvitfeldt@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.recipes
 - type: software
   title: rmarkdown
@@ -290,7 +290,7 @@ references:
     given-names: Richard
     email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.rmarkdown
 - type: software
   title: roxygen2
@@ -311,7 +311,7 @@ references:
     email: csardi.gabor@gmail.com
   - family-names: Eugster
     given-names: Manuel
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.roxygen2
 - type: software
   title: spelling
@@ -327,7 +327,7 @@ references:
   - family-names: Hester
     given-names: Jim
     email: james.hester@rstudio.com
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.spelling
 - type: software
   title: testthat
@@ -339,7 +339,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.testthat
 - type: software
   title: workflows
@@ -359,6 +359,6 @@ references:
     given-names: Hannah
     email: hannah@posit.co
     orcid: https://orcid.org/0000-0002-6049-5258
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.workflows
 
