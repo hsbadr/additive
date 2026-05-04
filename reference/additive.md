@@ -461,6 +461,7 @@ call. For this type of model, the template of the fit calls are:
 ## Examples
 
 ``` r
+
 additive()
 #> Generalized Additive Model (GAM) Specification (regression)
 #> 

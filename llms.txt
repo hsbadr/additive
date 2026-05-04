@@ -20,6 +20,7 @@ can be installed from
 [CRAN](https://CRAN.R-project.org/package=additive) using:
 
 ``` r
+
 install.packages("additive")
 ```
 
@@ -28,6 +29,7 @@ The development version of
 [GitHub](https://github.com/hsbadr/additive) using:
 
 ``` r
+
 install.packages("pak")
 pak::pkg_install("hsbadr/additive")
 ```
@@ -35,6 +37,7 @@ pak::pkg_install("hsbadr/additive")
 ## Example
 
 ``` r
+
 library(additive)
 
 set.seed(2020)
@@ -59,6 +62,7 @@ For more details, [get started with
 To cite `additive` in publications, please use:
 
 ``` r
+
 citation("additive")
 ```
 

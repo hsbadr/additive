@@ -1,10 +1,12 @@
 # Get started with \`additive\`
 
 ``` r
+
 library(additive)
 ```
 
 ``` r
+
 library(recipes)
 library(workflows)
 ```
@@ -13,6 +15,7 @@ Let’s simulate a data using `mgcv` package, which is automatically
 loaded by `additive`.
 
 ``` r
+
 set.seed(2020)
 dat <- gamSim(1, n = 400, dist = "normal", scale = 2)
 ```
@@ -23,6 +26,7 @@ In a first step, we use the `recipes` package to prepare (a recipe for)
 the data.
 
 ``` r
+
 test_recipe <- dat |>
   recipe() |>
   update_role(y, new_role = "outcome") |>
@@ -31,6 +35,7 @@ test_recipe <- dat |>
 ```
 
 ``` r
+
 print(test_recipe)
 ```
 
@@ -59,6 +64,7 @@ normalized all numeric predictors to facilitate model fitting later on.
 In the next step, we use `additive` to set up a basic model structure.
 
 ``` r
+
 test_model <- additive(
     family = gaussian(),
     method = "REML"
@@ -68,6 +74,7 @@ test_model <- additive(
 ```
 
 ``` r
+
 print(test_model)
 ```
 
@@ -87,6 +94,7 @@ family initially or set it to something else that we now wanted to
 change, we could use the `update` method as follows
 
 ``` r
+
 test_model <- test_model |>
   update(family = gaussian())
 ```
@@ -96,6 +104,7 @@ above defined data processing recipe and the model plus the actual model
 formula to be passed to the `mgcv` engine.
 
 ``` r
+
 test_workflow <- workflow() |>
   add_recipe(test_recipe) |>
   add_model(
@@ -105,6 +114,7 @@ test_workflow <- workflow() |>
 ```
 
 ``` r
+
 print(test_workflow)
 ```
 
@@ -130,11 +140,13 @@ We are now ready to fit the model by calling the `fit` method with the
 data set we want to train the model on.
 
 ``` r
+
 test_workflow_fit <- test_workflow |>
   fit(data = dat)
 ```
 
 ``` r
+
 print(test_workflow_fit)
 ```
 
@@ -163,6 +175,7 @@ print(test_workflow_fit)
 To extract the parsnip model fit from the workflow
 
 ``` r
+
 test_fit <- test_workflow_fit |>
   extract_fit_parsnip()
 ```
@@ -170,11 +183,13 @@ test_fit <- test_workflow_fit |>
 The `gamObject` object can be extracted as follows
 
 ``` r
+
 gam_fit <- test_workflow_fit |>
   extract_fit_engine()
 ```
 
 ``` r
+
 class(gam_fit)
 ```
 
@@ -186,10 +201,12 @@ the data reprocessing, which is automatically applied using the workflow
 preprocessor (recipe).
 
 ``` r
+
 newdata <- dat[1:5, ]
 ```
 
 ``` r
+
 test_workflow_fit |>
   predict(
     new_data = newdata,
@@ -210,6 +227,7 @@ test_workflow_fit |>
 To add the standard errors on the scale of the linear predictors
 
 ``` r
+
 test_workflow_fit |>
   predict(
     new_data = newdata,
