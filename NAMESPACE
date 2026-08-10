@@ -7,17 +7,25 @@ export(additive)
 export(additive_fit)
 import(mgcv)
 import(parsnip)
-importFrom(dplyr,between)
-importFrom(dplyr,bind_cols)
+importFrom(dplyr,
+  between,
+  bind_cols
+)
 importFrom(purrr,map_lgl)
-importFrom(rlang,"!!!")
-importFrom(rlang,abort)
-importFrom(rlang,call2)
-importFrom(rlang,enquo)
-importFrom(rlang,eval_tidy)
-importFrom(rlang,expr)
+importFrom(rlang,
+  "!!!",
+  abort,
+  call2,
+  enquo,
+  eval_tidy,
+  expr
+)
 importFrom(stats,qt)
-importFrom(tibble,as_tibble)
-importFrom(tibble,tibble)
-importFrom(utils,getFromNamespace)
-importFrom(utils,globalVariables)
+importFrom(tibble,
+  as_tibble,
+  tibble
+)
+importFrom(utils,
+  getFromNamespace,
+  globalVariables
+)
